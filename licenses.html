@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>QuickCut for Mac — オープンソースライセンス / Open Source Licenses</title>
+<style>body{font-family:-apple-system,"Hiragino Sans",sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.7;color:#222}h1{font-size:1.4rem}h2{font-size:1.1rem;margin-top:2rem}@media (prefers-color-scheme:dark){body{background:#1a1a1a;color:#ddd}}</style></head><body>
+<h1>QuickCut for Mac — オープンソースライセンス / Open Source Licenses</h1>
+<h2>FFmpeg</h2>
+<p>QuickCut for Mac は動画の解析・波形生成・書き出しに <a href="https://ffmpeg.org">FFmpeg</a> のライブラリ群（libavformat / libavcodec / libavutil / libswresample / libswscale / libavfilter）を<strong>動的リンク</strong>で同梱・利用しています。FFmpeg は <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">GNU Lesser General Public License v2.1 以降（LGPL v2.1+）</a>で配布されており、同梱ビルドは GPL コンポーネントを含まない LGPL 構成です。動的リンクのため、アプリ内 Contents/Frameworks/ の各 dylib を互換ビルドへ差し替え可能です。ライセンス全文はアプリに同梱（Contents/Resources/）されています。ソースコード: <a href="https://ffmpeg.org">ffmpeg.org</a></p>
+<p><em>QuickCut for Mac bundles the FFmpeg libraries via dynamic linking. FFmpeg is licensed under the <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">LGPL v2.1 or later</a>; the bundled build contains no GPL components. The dylibs in Contents/Frameworks/ can be replaced with a compatible build. The full license text is included with the app. Source: <a href="https://ffmpeg.org">ffmpeg.org</a></em></p>
+<h2>SwiftFFmpeg</h2>
+<p>FFmpeg の Swift バインディングとして <a href="https://github.com/sunlubo/SwiftFFmpeg">SwiftFFmpeg</a>（<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>）を利用しています。ライセンス全文はアプリに同梱されています。</p>
+</body></html>
