@@ -8,65 +8,116 @@
 <meta property="og:title" content="QuickCut for Mac">
 <meta property="og:description" content="Fast, lossless video trimmer for Mac. No project setup, no re-encoding.">
 <meta property="og:image" content="https://nbashohei.github.io/quickcut-info/assets/screenshot-en.jpg">
+<meta name="theme-color" content="#111113">
+<meta name="apple-mobile-web-app-title" content="QuickCut">
 <link rel="icon" href="assets/icon-512.png">
+<link rel="apple-touch-icon" href="assets/icon-512.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"QuickCut","operatingSystem":"macOS","applicationCategory":"MultimediaApplication","downloadUrl":"https://apps.apple.com/app/id6787743606"}</script>
 <style>
-:root { --bg:#141416; --panel:#1e1e21; --ink:#f2f2f2; --muted:#a8a8ad; --accent:#e84e1b; --line:#2c2c30; }
-* { box-sizing: border-box; }
-body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system, "Hiragino Sans", "PingFang SC", "PingFang TC", "Apple SD Gothic Neo", sans-serif; line-height:1.65; }
-.top { display:flex; align-items:center; gap:.7rem; padding:1rem 1.25rem; max-width:1100px; margin:0 auto; }
-.top img { width:36px; height:36px; border-radius:9px; } .top b { font-size:1.1rem; }
-nav { margin-left:auto; display:flex; flex-wrap:wrap; gap:.3rem .8rem; font-size:.85rem; justify-content:flex-end; }
-nav a { color:var(--muted); text-decoration:none; } nav a[aria-current="true"] { color:var(--ink); font-weight:600; }
-section { max-width:1100px; margin:0 auto; padding:0 1.25rem 3rem; }
-body.js section { display:none; } body.js section.active { display:block; }
-.hero { display:grid; grid-template-columns:1fr 1.2fr; gap:2rem; align-items:center; padding:2.5rem 0 3rem; }
-h1 { font-size:clamp(2rem, 4.5vw, 3.4rem); line-height:1.15; margin:0 0 1rem; letter-spacing:-.01em; } h1 em { font-style:normal; color:var(--accent); }
-.sub { color:var(--muted); font-size:1.1rem; margin:0 0 1.6rem; } .formats { color:var(--muted); font-size:.9rem; margin:1rem 0 0; }
-.badge img { display:block; } .shot, .shot2 { width:100%; height:auto; border-radius:12px; box-shadow:0 24px 60px rgba(0,0,0,.55); }
-.shot2 { margin:1.5rem 0 3rem; }
-h2 { font-size:1.6rem; margin:2.5rem 0 1.2rem; }
-.features { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; }
-.features li { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:1.1rem 1.2rem; display:grid; gap:.35rem; align-content:start; }
-.features .ic { font-size:1.5rem; } .features b { font-size:1.05rem; } .features span:last-child { color:var(--muted); font-size:.95rem; }
-.price { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:1.2rem 1.4rem; font-size:1.05rem; }
-.notes { color:var(--muted); padding-left:1.2rem; } .cta { margin:3rem 0 2rem; }
-footer { border-top:1px solid var(--line); padding-top:1.5rem; color:var(--muted); font-size:.9rem; display:flex; flex-wrap:wrap; gap:.4rem .5rem; }
-footer a { color:var(--muted); } footer span { margin-left:auto; }
-@media (max-width: 820px) { .hero { grid-template-columns:1fr; } .features { grid-template-columns:1fr; } nav { margin-left:0; justify-content:flex-start; } .top { flex-wrap:wrap; } }
+:root { --bg:#111113; --surface:#19191c; --surface-raised:#202024; --ink:#f5f5f3; --muted:#a6a6ab; --soft:#727279; --accent:#9865ed; --accent-bright:#b58aff; --accent-faint:rgba(152,101,237,.17); --line:rgba(255,255,255,.11); --max:1180px; }
+* { box-sizing:border-box; } html { background:var(--bg); }
+body { margin:0; min-width:320px; background:radial-gradient(900px 530px at 78% -7%, var(--accent-faint), transparent 67%), var(--bg); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Hiragino Sans", "PingFang SC", "PingFang TC", "Apple SD Gothic Neo", sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; } .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.top { height:76px; max-width:var(--max); margin:0 auto; padding:0 28px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand { display:flex; align-items:center; gap:11px; color:var(--ink); text-decoration:none; } .brand img { width:34px; height:34px; border-radius:8px; }
+.brand-name { display:grid; line-height:1; gap:3px; } .brand-name b { font-size:16px; letter-spacing:-.02em; } .brand-name small { color:var(--soft); font-size:9px; font-weight:700; letter-spacing:.14em; }
+.language-select { position:relative; } .language-select::after { content:"⌄"; position:absolute; right:11px; top:50%; transform:translateY(-56%); color:var(--muted); pointer-events:none; }
+.language-select select { appearance:none; min-width:138px; padding:8px 28px 8px 11px; border:1px solid var(--line); border-radius:7px; background:rgba(255,255,255,.04); color:var(--ink); font:500 13px inherit; cursor:pointer; } .language-select select:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+section { max-width:var(--max); margin:0 auto; padding:0 28px 52px; } body.js section { display:none; } body.js section.active { display:block; }
+.hero { display:grid; grid-template-columns:minmax(310px,.83fr) minmax(480px,1.35fr); gap:64px; align-items:center; min-height:590px; padding:58px 0 72px; }
+.eyebrow { margin:0 0 18px; color:var(--muted); font-size:13px; font-weight:600; letter-spacing:.02em; } .eyebrow span, .cta p span { color:var(--soft); font-weight:500; }
+h1 { max-width:580px; margin:0; font-size:clamp(43px,5vw,68px); line-height:1.03; letter-spacing:-.055em; } h1 em { color:var(--accent-bright); font-style:normal; }
+.sub { margin:24px 0 28px; color:var(--muted); font-size:17px; letter-spacing:-.012em; } .badge { display:inline-block; } .badge img { display:block; height:54px; width:auto; transition:transform .2s ease, filter .2s ease; } .badge:hover img { transform:translateY(-2px); filter:brightness(1.13); }
+.formats { display:flex; align-items:center; gap:8px; margin:22px 0 0; color:var(--soft); font-size:13px; } .formats span { width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-faint); }
+.hero-visual { position:relative; } .hero-visual::before { content:""; position:absolute; inset:10% -4% -10%; z-index:-1; border-radius:45%; background:radial-gradient(ellipse, rgba(40,131,225,.19), transparent 67%); filter:blur(18px); }
+.shot { display:block; width:100%; height:auto; border:1px solid rgba(255,255,255,.19); border-radius:17px; box-shadow:0 34px 76px rgba(0,0,0,.53), 0 1px 0 rgba(255,255,255,.12) inset; }
+.section-heading { display:flex; align-items:center; gap:16px; margin:12px 0 22px; } .section-heading > span { width:27px; height:1px; background:var(--accent); }
+h2 { margin:0; font-size:clamp(25px,3vw,36px); line-height:1.17; letter-spacing:-.04em; }
+.features { display:grid; grid-template-columns:repeat(3, 1fr); margin:0; padding:0; list-style:none; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+.features li { min-height:298px; display:grid; grid-template-rows:128px 1fr; gap:18px; padding:20px 20px 24px; overflow:hidden; border-right:1px solid var(--line); border-bottom:1px solid var(--line); background:linear-gradient(130deg, rgba(255,255,255,.035), transparent 56%); } .features li:hover .visual { border-color:rgba(181,138,255,.48); background-color:rgba(152,101,237,.09); }
+.feature-copy { display:grid; align-content:start; gap:8px; } .feature-number { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.08em; } .features b { font-size:16px; line-height:1.35; letter-spacing:-.018em; } .features .feature-copy > span:last-child { color:var(--muted); font-size:14px; line-height:1.55; }
+.visual { position:relative; width:100%; height:128px; overflow:hidden; border:1px solid rgba(181,138,255,.24); border-radius:10px; background:radial-gradient(circle at 50% 50%, rgba(152,101,237,.1), transparent 52%), #17151c; box-shadow:inset 0 0 0 1px rgba(0,0,0,.2); transition:border-color .25s ease, background-color .25s ease; }
+.visual::after { content:""; position:absolute; inset:0; background:linear-gradient(135deg, rgba(255,255,255,.05), transparent 38%); pointer-events:none; }
+.visual-open img { position:absolute; z-index:1; left:27px; top:29px; width:67px; height:67px; filter:drop-shadow(0 7px 12px rgba(0,0,0,.35)); } .visual-open em { position:absolute; left:91px; top:63px; width:27px; height:2px; background:var(--accent-bright); } .visual-open em::after { content:""; position:absolute; right:-1px; top:-4px; width:9px; height:9px; border-top:2px solid var(--accent-bright); border-right:2px solid var(--accent-bright); transform:rotate(45deg); } .visual-open span { position:absolute; right:28px; display:grid; place-items:center; width:54px; height:20px; border:1px solid rgba(181,138,255,.66); border-radius:4px; background:rgba(152,101,237,.12); color:var(--accent-bright); font:700 9px/1 -apple-system, sans-serif; letter-spacing:.07em; } .visual-open span:nth-of-type(1) { top:27px; } .visual-open span:nth-of-type(2) { top:54px; } .visual-open span:nth-of-type(3) { top:81px; }
+.visual-keys { display:flex; align-items:center; justify-content:center; gap:8px; } .visual-keys i { width:34px; height:34px; border:2px solid var(--accent-bright); border-radius:7px; background:rgba(152,101,237,.1); box-shadow:0 5px 0 rgba(152,101,237,.25); } .visual-keys i:nth-child(2) { transform:translateY(-12px); } .visual-keys i:nth-child(3) { transform:translateY(12px); }
+.visual-speed i { position:absolute; left:50%; top:50%; width:27px; height:27px; transform:translate(-50%,-50%) rotate(45deg); border-top:4px solid var(--accent-bright); border-right:4px solid var(--accent-bright); } .visual-speed i::before, .visual-speed i::after { content:""; position:absolute; width:27px; height:27px; border-top:4px solid var(--accent-bright); border-right:4px solid var(--accent-bright); } .visual-speed i::before { left:-18px; top:14px; opacity:.66; } .visual-speed i::after { left:-36px; top:32px; opacity:.32; } .visual-speed span { position:absolute; left:24px; right:24px; top:50%; height:2px; background:linear-gradient(90deg, transparent, rgba(181,138,255,.43) 28%, rgba(181,138,255,.43) 73%, transparent); } .visual-speed span::before, .visual-speed span::after { content:""; position:absolute; left:0; height:2px; background:var(--accent-bright); } .visual-speed span::before { top:-20px; width:38px; opacity:.45; } .visual-speed span::after { top:20px; width:60px; opacity:.76; }
+.visual-scenes { display:flex; align-items:center; justify-content:center; gap:9px; } .visual-scenes i { position:relative; width:39px; height:55px; border:2px solid var(--accent-bright); border-radius:5px; background:rgba(152,101,237,.08); } .visual-scenes i:nth-child(2) { height:70px; background:rgba(152,101,237,.23); } .visual-scenes i::after { content:""; position:absolute; left:8px; right:8px; bottom:9px; height:2px; background:rgba(181,138,255,.62); }
+.visual-wave i { position:absolute; inset:23px 0; display:block; background:linear-gradient(90deg, rgba(181,138,255,.56), var(--accent-bright) 14%, var(--accent-bright) 86%, rgba(181,138,255,.56)); clip-path:polygon(0 48%, 3% 44%, 5% 57%, 7% 29%, 9% 67%, 12% 41%, 15% 47%, 18% 18%, 20% 79%, 23% 35%, 26% 52%, 29% 25%, 32% 70%, 35% 43%, 39% 48%, 42% 10%, 45% 88%, 48% 34%, 51% 56%, 54% 22%, 57% 73%, 60% 41%, 63% 50%, 66% 15%, 69% 83%, 72% 31%, 76% 59%, 79% 26%, 82% 68%, 85% 43%, 89% 50%, 92% 32%, 95% 61%, 97% 42%, 100% 48%, 100% 52%, 97% 58%, 95% 39%, 92% 68%, 89% 50%, 85% 57%, 82% 32%, 79% 74%, 76% 41%, 72% 69%, 69% 17%, 66% 85%, 63% 50%, 60% 59%, 57% 27%, 54% 78%, 51% 44%, 48% 66%, 45% 12%, 42% 90%, 39% 52%, 35% 57%, 32% 30%, 29% 75%, 26% 48%, 23% 65%, 20% 21%, 18% 82%, 15% 53%, 12% 59%, 9% 33%, 7% 71%, 5% 43%, 3% 56%, 0 52%); }
+.visual-save i { position:absolute; left:31px; top:25px; width:48px; height:71px; border:2px solid var(--accent-bright); border-radius:5px; background:rgba(152,101,237,.12); } .visual-save i::before { content:""; position:absolute; left:10px; right:10px; top:15px; height:2px; background:var(--accent-bright); box-shadow:0 10px 0 rgba(181,138,255,.58), 0 20px 0 rgba(181,138,255,.32); } .visual-save b { position:absolute; left:91px; top:62px; width:46px; height:2px; background:var(--accent-bright); } .visual-save b::after { content:""; position:absolute; right:-1px; top:-5px; width:11px; height:11px; border-top:2px solid var(--accent-bright); border-right:2px solid var(--accent-bright); transform:rotate(45deg); } .visual-save span { position:absolute; right:31px; top:42px; width:28px; height:42px; border:2px solid var(--accent-bright); border-radius:4px; background:rgba(152,101,237,.25); } .visual-save span::before { content:""; position:absolute; left:7px; right:7px; top:12px; height:2px; background:var(--accent-bright); }
+.detail { margin:82px 0; } .detail > div { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:17px; background:var(--surface); box-shadow:0 24px 65px rgba(0,0,0,.38); } .detail img { display:block; width:100%; height:auto; }
+.pricing { display:grid; grid-template-columns:minmax(180px,.7fr) minmax(380px,1.3fr); gap:44px; align-items:start; padding:39px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); } .pricing h2 { font-size:31px; }
+.price { margin:0; color:var(--ink); font-size:18px; line-height:1.6; letter-spacing:-.018em; }
+.notes-block { display:grid; grid-template-columns:minmax(180px,.7fr) minmax(380px,1.3fr); gap:44px; padding:40px 0 10px; } .notes-block h2 { font-size:22px; } .notes { margin:0; padding:0; list-style:none; color:var(--muted); font-size:14px; } .notes li { position:relative; padding:0 0 13px 18px; } .notes li::before { content:""; position:absolute; width:5px; height:5px; left:0; top:.62em; border-radius:50%; background:var(--soft); }
+.cta { display:flex; align-items:center; justify-content:space-between; gap:30px; margin:72px 0 42px; padding:31px 34px; border:1px solid rgba(181,138,255,.38); border-radius:14px; background:linear-gradient(106deg, rgba(152,101,237,.21), rgba(152,101,237,.04) 60%, transparent); } .cta p { margin:0 0 5px; color:var(--muted); font-size:13px; font-weight:600; } .cta h2 { max-width:660px; font-size:27px; }
+footer { display:flex; flex-wrap:wrap; gap:8px; padding:22px 0 4px; border-top:1px solid var(--line); color:var(--soft); font-size:13px; } footer a { color:var(--muted); text-underline-offset:3px; } footer a:hover { color:var(--ink); } footer span { margin-left:auto; }
+@media (max-width:850px) { .hero { grid-template-columns:1fr; gap:42px; padding-top:50px; } .hero-text { max-width:600px; } .features { grid-template-columns:repeat(2, 1fr); } }
+@media (max-width:600px) { .top { height:66px; padding:0 18px; } .brand img { width:31px; height:31px; } .language-select select { min-width:0; width:118px; } section { padding:0 18px 38px; } .hero { min-height:0; padding:42px 0 52px; gap:33px; } h1 { font-size:clamp(39px,12vw,54px); } .sub { font-size:16px; } .features { grid-template-columns:1fr; } .features li { min-height:145px; padding:21px 18px; } .detail { margin:54px 0; } .pricing, .notes-block { grid-template-columns:1fr; gap:16px; padding:30px 0; } .price { font-size:16px; } .cta { display:block; margin:48px 0 31px; padding:25px 22px; } .cta .badge { margin-top:22px; } .cta h2 { font-size:24px; } footer span { width:100%; margin:5px 0 0; } }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
 </style>
 </head>
 <body>
-<div class="top"><img src="assets/icon-512.png" alt=""><b>QuickCut</b><nav aria-label="Language"><a href="#ja" data-lang="ja">日本語</a> <a href="#en" data-lang="en">English</a> <a href="#de" data-lang="de">Deutsch</a> <a href="#es" data-lang="es">Español</a> <a href="#fr" data-lang="fr">Français</a> <a href="#it" data-lang="it">Italiano</a> <a href="#ko" data-lang="ko">한국어</a> <a href="#pt-BR" data-lang="pt-BR">Português (Brasil)</a> <a href="#zh-Hans" data-lang="zh-Hans">简体中文</a> <a href="#zh-Hant" data-lang="zh-Hant">繁體中文</a></nav></div>
+<div class="top"><a class="brand" href="#" aria-label="QuickCut home"><img src="assets/icon-512.png" alt=""><span class="brand-name"><b>QuickCut</b><small>FOR MAC</small></span></a><label class="language-select"><span class="sr-only">Language</span><select id="language" aria-label="Language"><option value="ja">日本語</option>
+<option value="en">English</option>
+<option value="de">Deutsch</option>
+<option value="es">Español</option>
+<option value="fr">Français</option>
+<option value="it">Italiano</option>
+<option value="ko">한국어</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="zh-Hans">简体中文</option>
+<option value="zh-Hant">繁體中文</option></select></label></div>
 
 <section id="ja" lang="ja">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>ぜんぶ速い<br><em>動画カットアプリ</em></h1>
     <p class="sub">動画を切るだけに重い編集ソフトはいらない<br>開いてすぐ切って無劣化のまま保存</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">対応形式: mp4 / mov / mkv（配信録画もそのまま）</p>
+    <p class="formats"><span aria-hidden="true"></span>対応形式: mp4 / mov / mkv（配信録画もそのまま）</p>
   </div>
-  <img class="shot" src="assets/screenshot-ja.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-ja.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>取り込む前に 必要なところだけ</h2>
+<div class="section-heading"><span></span><h2>取り込む前に 必要なところだけ</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>プロジェクト不要ですぐ開く</b><span>ライブラリも読み込み待ちもなし。開いた瞬間から編集。</span></li>
-<li><span class="ic">⌨️</span><b>ショートカットで高速カット</b><span>E・R で切って JKL で探す。キー割り当ては自分好みに。</span></li>
-<li><span class="ic">⚡️</span><b>再エンコードなしで高速保存</b><span>書き出しを待たない。画質も音質も、そのまま 100%。</span></li>
-<li><span class="ic">✂️</span><b>複数シーンをまとめて切り抜き</b><span>離れたシーンも一括書き出し</span></li>
-<li><span class="ic">🔍</span><b>波形＆サムネイルですぐ見つかる</b><span>無音や不要なシーンが、ひと目で分かる。</span></li>
-<li><span class="ic">💾</span><b>上書きと別名保存を選べる</b><span>上書きなら、容量や転送時間を節約。</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>プロジェクト不要ですぐ開く</b><span>ライブラリも読み込み待ちもなし。開いた瞬間から編集。</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>ショートカットで高速カット</b><span>E・R で切って JKL で探す。キー割り当ては自分好みに。</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>再エンコードなしで高速保存</b><span>書き出しを待たない。画質も音質も、そのまま 100%。</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>複数シーンをまとめて切り抜き</b><span>離れたシーンも一括書き出し</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>波形＆サムネイルですぐ見つかる</b><span>無音や不要なシーンが、ひと目で分かる。</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>上書きと別名保存を選べる</b><span>上書きなら、容量や転送時間を節約。</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-ja.jpg" alt="" width="1600" loading="lazy">
-<h2>価格</h2>
-<p class="price">書き出しは20回まで無料です。それ以降はApp内課金「QuickCut Unlimited」で回数無制限になります。買い切りで、月額はありません。</p>
+<figure class="detail"><div><img src="assets/screenshot2-ja.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>価格</h2>
+  <p class="price">書き出しは20回まで無料です。それ以降はApp内課金「QuickCut Unlimited」で回数無制限になります。買い切りで、月額はありません。</p>
+</div>
+<div class="notes-block">
 <h2>ご注意</h2>
 <ul class="notes">
 <li>カット専用です。テロップ、エフェクト、BGMの追加はできません</li>
 <li>.mkvは保存時にMP4になります。.mkvへの上書きはできません</li>
 <li>VP9やAV1の動画は、お使いのMacによっては開けません</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>ぜんぶ速い 動画カットアプリ</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#ja">プライバシーポリシー</a> · <a href="licenses.html">オープンソースライセンス</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">サポート</a>
   <span>© 2026 Shohei Namba</span>
@@ -75,32 +126,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="en" lang="en">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Fast at every step<br><em>Just cut video</em></h1>
     <p class="sub">Just cutting a video? You don’t need a full-blown editor.<br>Open, cut, and save. Nothing gets re-encoded.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">Formats: MP4 / MOV / MKV (stream recordings too)</p>
+    <p class="formats"><span aria-hidden="true"></span>Formats: MP4 / MOV / MKV (stream recordings too)</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Cut before you import</h2>
+<div class="section-heading"><span></span><h2>Cut before you import</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>Opens instantly, no project setup</b><span>No library, nothing to import. Edit the moment it opens.</span></li>
-<li><span class="ic">⌨️</span><b>Fast cuts with shortcuts</b><span>E to split, R to delete, JKL to scrub. Remap any key.</span></li>
-<li><span class="ic">⚡️</span><b>Fast saves, no re-encoding</b><span>No waiting on export. Picture and sound stay untouched.</span></li>
-<li><span class="ic">✂️</span><b>Clip several scenes at once</b><span>Scattered scenes export in one go.</span></li>
-<li><span class="ic">🔍</span><b>Find it fast: waveform and thumbnails</b><span>Silence and dead spots stand out.</span></li>
-<li><span class="ic">💾</span><b>Overwrite or save as new</b><span>Overwriting saves space and transfer time.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Opens instantly, no project setup</b><span>No library, nothing to import. Edit the moment it opens.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Fast cuts with shortcuts</b><span>E to split, R to delete, JKL to scrub. Remap any key.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Fast saves, no re-encoding</b><span>No waiting on export. Picture and sound stay untouched.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Clip several scenes at once</b><span>Scattered scenes export in one go.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Find it fast: waveform and thumbnails</b><span>Silence and dead spots stand out.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Overwrite or save as new</b><span>Overwriting saves space and transfer time.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Price</h2>
-<p class="price">Your first 20 exports are free. After that, the in-app purchase “QuickCut Unlimited” removes the limit. One-time purchase, no subscription.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Price</h2>
+  <p class="price">Your first 20 exports are free. After that, the in-app purchase “QuickCut Unlimited” removes the limit. One-time purchase, no subscription.</p>
+</div>
+<div class="notes-block">
 <h2>Please note</h2>
 <ul class="notes">
 <li>QuickCut only cuts. It doesn’t add titles, effects, or music</li>
 <li>MKV files are saved as MP4; you can’t overwrite an MKV</li>
 <li>VP9 and AV1 videos may not open on some Macs</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Fast at every step Just cut video</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#en">Privacy Policy</a> · <a href="licenses.html">Open Source Licenses</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Support</a>
   <span>© 2026 Shohei Namba</span>
@@ -109,32 +183,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="de" lang="de">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Alles geht schnell<br><em>Schneiden, sonst nichts</em></h1>
     <p class="sub">Nur ein Video kürzen? Dafür braucht es kein Schnittprogramm.<br>Öffnen, schneiden, sichern. Ohne Neucodierung.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-de-de.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">Formate: MP4 / MOV / MKV (auch Stream-Aufnahmen)</p>
+    <p class="formats"><span aria-hidden="true"></span>Formate: MP4 / MOV / MKV (auch Stream-Aufnahmen)</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Erst schneiden, dann importieren</h2>
+<div class="section-heading"><span></span><h2>Erst schneiden, dann importieren</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>Öffnet sofort, ohne Projekt</b><span>Keine Mediathek, kein Import. Bearbeiten, sobald die Datei offen ist.</span></li>
-<li><span class="ic">⌨️</span><b>Schnell schneiden per Tastatur</b><span>E teilt, R löscht, JKL spult. Jede Taste frei belegbar.</span></li>
-<li><span class="ic">⚡️</span><b>Schnell sichern, ohne Neucodierung</b><span>Kein Warten auf den Export. Bild und Ton bleiben unverändert.</span></li>
-<li><span class="ic">✂️</span><b>Mehrere Szenen auf einmal</b><span>Verstreute Szenen werden in einem Durchgang exportiert.</span></li>
-<li><span class="ic">🔍</span><b>Schnell finden: Wellenform + Vorschaubilder</b><span>Stille und Längen fallen sofort auf.</span></li>
-<li><span class="ic">💾</span><b>Ersetzen oder als neue Datei sichern</b><span>Ersetzen spart Speicherplatz und Kopierzeit.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Öffnet sofort, ohne Projekt</b><span>Keine Mediathek, kein Import. Bearbeiten, sobald die Datei offen ist.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Schnell schneiden per Tastatur</b><span>E teilt, R löscht, JKL spult. Jede Taste frei belegbar.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Schnell sichern, ohne Neucodierung</b><span>Kein Warten auf den Export. Bild und Ton bleiben unverändert.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Mehrere Szenen auf einmal</b><span>Verstreute Szenen werden in einem Durchgang exportiert.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Schnell finden: Wellenform + Vorschaubilder</b><span>Stille und Längen fallen sofort auf.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Ersetzen oder als neue Datei sichern</b><span>Ersetzen spart Speicherplatz und Kopierzeit.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Preis</h2>
-<p class="price">Die ersten 20 Exporte sind kostenlos. Danach hebt der In-App-Kauf „QuickCut Unlimited“ die Grenze auf. Einmaliger Kauf, kein Abo.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Preis</h2>
+  <p class="price">Die ersten 20 Exporte sind kostenlos. Danach hebt der In-App-Kauf „QuickCut Unlimited“ die Grenze auf. Einmaliger Kauf, kein Abo.</p>
+</div>
+<div class="notes-block">
 <h2>Bitte beachten</h2>
 <ul class="notes">
 <li>QuickCut schneidet nur. Titel, Effekte oder Musik lassen sich nicht hinzufügen</li>
 <li>MKV-Dateien werden als MP4 gesichert; eine MKV lässt sich nicht ersetzen</li>
 <li>VP9- und AV1-Videos lassen sich auf manchen Macs nicht öffnen</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-de-de.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Alles geht schnell Schneiden, sonst nichts</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-de-de.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#de">Datenschutzrichtlinie</a> · <a href="licenses.html">Open-Source-Lizenzen</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Support</a>
   <span>© 2026 Shohei Namba</span>
@@ -143,32 +240,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="es" lang="es">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Rápido en todo<br><em>Solo para cortar vídeo</em></h1>
     <p class="sub">Para cortar un vídeo no hace falta un editor completo.<br>Ábrelo, corta y guarda. Nada se recodifica.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-es-es.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">MP4 / MOV / MKV, grabaciones de streaming incluidas</p>
+    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV, grabaciones de streaming incluidas</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Corta antes de importar</h2>
+<div class="section-heading"><span></span><h2>Corta antes de importar</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>Se abre al instante, sin proyecto</b><span>Sin biblioteca, sin importar nada. Edita en cuanto se abre.</span></li>
-<li><span class="ic">⌨️</span><b>Cortes rápidos con atajos</b><span>E divide, R elimina, JKL para desplazarte. Reasigna cualquier tecla.</span></li>
-<li><span class="ic">⚡️</span><b>Guarda rápido, sin recodificar</b><span>Sin esperas al exportar. Imagen y sonido intactos.</span></li>
-<li><span class="ic">✂️</span><b>Recorta varias escenas a la vez</b><span>Escenas separadas, una sola exportación.</span></li>
-<li><span class="ic">🔍</span><b>Encuéntralo rápido: forma de onda y miniaturas</b><span>Los silencios y tiempos muertos saltan a la vista.</span></li>
-<li><span class="ic">💾</span><b>Reemplazar o guardar como nuevo</b><span>Reemplazar ahorra espacio y tiempo de transferencia.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Se abre al instante, sin proyecto</b><span>Sin biblioteca, sin importar nada. Edita en cuanto se abre.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Cortes rápidos con atajos</b><span>E divide, R elimina, JKL para desplazarte. Reasigna cualquier tecla.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Guarda rápido, sin recodificar</b><span>Sin esperas al exportar. Imagen y sonido intactos.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Recorta varias escenas a la vez</b><span>Escenas separadas, una sola exportación.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Encuéntralo rápido: forma de onda y miniaturas</b><span>Los silencios y tiempos muertos saltan a la vista.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Reemplazar o guardar como nuevo</b><span>Reemplazar ahorra espacio y tiempo de transferencia.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Precio</h2>
-<p class="price">Las 20 primeras exportaciones son gratis. Después, la compra dentro de la app “QuickCut Unlimited” quita el límite. Pago único, sin suscripción.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Precio</h2>
+  <p class="price">Las 20 primeras exportaciones son gratis. Después, la compra dentro de la app “QuickCut Unlimited” quita el límite. Pago único, sin suscripción.</p>
+</div>
+<div class="notes-block">
 <h2>Ten en cuenta</h2>
 <ul class="notes">
 <li>QuickCut solo corta. No añade títulos, efectos ni música</li>
 <li>Los archivos MKV se guardan como MP4; no se puede reemplazar un MKV</li>
 <li>Los vídeos VP9 y AV1 pueden no abrirse en algunos Mac</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-es-es.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Rápido en todo Solo para cortar vídeo</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-es-es.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#es">Política de privacidad</a> · <a href="licenses.html">Licencias de código abierto</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Soporte</a>
   <span>© 2026 Shohei Namba</span>
@@ -177,32 +297,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="fr" lang="fr">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Rapide de bout en bout<br><em>Couper, rien d’autre</em></h1>
     <p class="sub">Juste couper une vidéo ? Pas besoin d’un logiciel de montage.<br>Ouvrez, coupez, enregistrez. Sans réencodage.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-fr-fr.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">Formats : MP4 / MOV / MKV (enregistrements de stream inclus)</p>
+    <p class="formats"><span aria-hidden="true"></span>Formats : MP4 / MOV / MKV (enregistrements de stream inclus)</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Coupez avant d’importer</h2>
+<div class="section-heading"><span></span><h2>Coupez avant d’importer</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>S’ouvre aussitôt, sans projet</b><span>Ni bibliothèque, ni import. Le fichier s’ouvre, vous montez.</span></li>
-<li><span class="ic">⌨️</span><b>Des coupes rapides au clavier</b><span>E scinde, R supprime, JKL fait défiler. Chaque touche est réassignable.</span></li>
-<li><span class="ic">⚡️</span><b>Enregistrement rapide, sans réencodage</b><span>Pas d’attente à l’exportation. Image et son restent intacts.</span></li>
-<li><span class="ic">✂️</span><b>Plusieurs scènes d’un coup</b><span>Des scènes éparses, exportées en une seule opération.</span></li>
-<li><span class="ic">🔍</span><b>Repérez vite : forme d’onde et vignettes</b><span>Silences et temps morts sautent aux yeux.</span></li>
-<li><span class="ic">💾</span><b>Remplacer ou nouveau fichier</b><span>Remplacer l’original économise de l’espace et du temps de transfert.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>S’ouvre aussitôt, sans projet</b><span>Ni bibliothèque, ni import. Le fichier s’ouvre, vous montez.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Des coupes rapides au clavier</b><span>E scinde, R supprime, JKL fait défiler. Chaque touche est réassignable.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Enregistrement rapide, sans réencodage</b><span>Pas d’attente à l’exportation. Image et son restent intacts.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Plusieurs scènes d’un coup</b><span>Des scènes éparses, exportées en une seule opération.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Repérez vite : forme d’onde et vignettes</b><span>Silences et temps morts sautent aux yeux.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Remplacer ou nouveau fichier</b><span>Remplacer l’original économise de l’espace et du temps de transfert.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Prix</h2>
-<p class="price">Vos 20 premières exportations sont gratuites. Ensuite, l’achat intégré « QuickCut Unlimited » lève la limite. Achat unique, sans abonnement.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Prix</h2>
+  <p class="price">Vos 20 premières exportations sont gratuites. Ensuite, l’achat intégré « QuickCut Unlimited » lève la limite. Achat unique, sans abonnement.</p>
+</div>
+<div class="notes-block">
 <h2>À noter</h2>
 <ul class="notes">
 <li>QuickCut ne fait que couper. Il n’ajoute ni titres, ni effets, ni musique</li>
 <li>Les fichiers MKV sont enregistrés en MP4 ; impossible de remplacer un MKV</li>
 <li>Les vidéos VP9 et AV1 peuvent ne pas s’ouvrir sur certains Mac</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-fr-fr.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Rapide de bout en bout Couper, rien d’autre</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-fr-fr.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#fr">Politique de confidentialité</a> · <a href="licenses.html">Licences open source</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Assistance</a>
   <span>© 2026 Shohei Namba</span>
@@ -211,32 +354,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="it" lang="it">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Veloce in tutto<br><em>Solo per tagliare video</em></h1>
     <p class="sub">Per tagliare un video non serve un editor completo.<br>Apri, taglia e salva. Niente ricodifica.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-it-it.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">MP4 / MOV / MKV, registrazioni di streaming comprese</p>
+    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV, registrazioni di streaming comprese</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Taglia prima di importare</h2>
+<div class="section-heading"><span></span><h2>Taglia prima di importare</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>Si apre subito, senza progetto</b><span>Niente libreria, niente importazione. Modifichi appena si apre.</span></li>
-<li><span class="ic">⌨️</span><b>Tagli rapidi da tastiera</b><span>E divide, R elimina, JKL per scorrere. Riassegna qualsiasi tasto.</span></li>
-<li><span class="ic">⚡️</span><b>Salva subito, senza ricodifica</b><span>Nessuna attesa per esportare. Immagine e audio restano intatti.</span></li>
-<li><span class="ic">✂️</span><b>Ritaglia più scene in una volta</b><span>Le scene sparse si esportano in un colpo solo.</span></li>
-<li><span class="ic">🔍</span><b>Trova subito: forma d’onda e miniature</b><span>Silenzi e tempi morti si vedono a colpo d’occhio.</span></li>
-<li><span class="ic">💾</span><b>Sostituisci o salva come nuovo</b><span>Sostituire risparmia spazio e tempo di copia.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Si apre subito, senza progetto</b><span>Niente libreria, niente importazione. Modifichi appena si apre.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Tagli rapidi da tastiera</b><span>E divide, R elimina, JKL per scorrere. Riassegna qualsiasi tasto.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Salva subito, senza ricodifica</b><span>Nessuna attesa per esportare. Immagine e audio restano intatti.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Ritaglia più scene in una volta</b><span>Le scene sparse si esportano in un colpo solo.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Trova subito: forma d’onda e miniature</b><span>Silenzi e tempi morti si vedono a colpo d’occhio.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Sostituisci o salva come nuovo</b><span>Sostituire risparmia spazio e tempo di copia.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Prezzo</h2>
-<p class="price">Le prime 20 esportazioni sono gratuite. Poi l’acquisto in-app “QuickCut Unlimited” elimina il limite. Pagamento unico, nessun abbonamento.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Prezzo</h2>
+  <p class="price">Le prime 20 esportazioni sono gratuite. Poi l’acquisto in-app “QuickCut Unlimited” elimina il limite. Pagamento unico, nessun abbonamento.</p>
+</div>
+<div class="notes-block">
 <h2>Da sapere</h2>
 <ul class="notes">
 <li>QuickCut taglia e basta. Non aggiunge titoli, effetti o musica</li>
 <li>I file MKV vengono salvati come MP4; non è possibile sostituire un MKV</li>
 <li>I video VP9 e AV1 potrebbero non aprirsi su alcuni Mac</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-it-it.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Veloce in tutto Solo per tagliare video</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-it-it.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#it">Informativa sulla privacy</a> · <a href="licenses.html">Licenze open source</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Supporto</a>
   <span>© 2026 Shohei Namba</span>
@@ -245,32 +411,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="ko" lang="ko">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>모든 게 빠른<br><em>동영상 자르기 앱</em></h1>
     <p class="sub">동영상 자르기에 무거운 편집 프로그램은 필요 없습니다<br>열어서 자르고 저장. 재인코딩은 하지 않습니다</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">지원 형식: MP4 / MOV / MKV(방송 녹화본도 그대로)</p>
+    <p class="formats"><span aria-hidden="true"></span>지원 형식: MP4 / MOV / MKV(방송 녹화본도 그대로)</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>편집 프로그램에 넣기 전, 필요한 부분만</h2>
+<div class="section-heading"><span></span><h2>편집 프로그램에 넣기 전, 필요한 부분만</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>프로젝트 없이 바로 열기</b><span>라이브러리도 불러오기도 없이, 열리는 순간부터 편집</span></li>
-<li><span class="ic">⌨️</span><b>단축키로 빠르게 자르기</b><span>E로 분할, R로 삭제, JKL로 탐색 키 할당은 원하는 대로 바꿀 수 있습니다</span></li>
-<li><span class="ic">⚡️</span><b>재인코딩 없이 빠르게 저장</b><span>내보내기를 기다릴 필요가 없습니다 화질도 음질도 원본 그대로</span></li>
-<li><span class="ic">✂️</span><b>여러 장면을 한 번에 잘라내기</b><span>떨어져 있는 장면도 한꺼번에 내보냅니다.</span></li>
-<li><span class="ic">🔍</span><b>파형과 썸네일로 바로 찾기</b><span>무음 구간과 버릴 장면이 한눈에 보입니다.</span></li>
-<li><span class="ic">💾</span><b>원본 파일 대치 또는 새 파일로 저장</b><span>원본 파일을 대치하면 용량도 전송 시간도 절약됩니다.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>프로젝트 없이 바로 열기</b><span>라이브러리도 불러오기도 없이, 열리는 순간부터 편집</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>단축키로 빠르게 자르기</b><span>E로 분할, R로 삭제, JKL로 탐색 키 할당은 원하는 대로 바꿀 수 있습니다</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>재인코딩 없이 빠르게 저장</b><span>내보내기를 기다릴 필요가 없습니다 화질도 음질도 원본 그대로</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>여러 장면을 한 번에 잘라내기</b><span>떨어져 있는 장면도 한꺼번에 내보냅니다.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>파형과 썸네일로 바로 찾기</b><span>무음 구간과 버릴 장면이 한눈에 보입니다.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>원본 파일 대치 또는 새 파일로 저장</b><span>원본 파일을 대치하면 용량도 전송 시간도 절약됩니다.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>가격</h2>
-<p class="price">내보내기는 20회까지 무료입니다. 그 이후에는 앱 내 구입 “QuickCut Unlimited”로 횟수 제한이 사라집니다. 한 번만 구입하면 됩니다. 구독은 없습니다.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>가격</h2>
+  <p class="price">내보내기는 20회까지 무료입니다. 그 이후에는 앱 내 구입 “QuickCut Unlimited”로 횟수 제한이 사라집니다. 한 번만 구입하면 됩니다. 구독은 없습니다.</p>
+</div>
+<div class="notes-block">
 <h2>참고</h2>
 <ul class="notes">
 <li>QuickCut은 자르기만 합니다. 자막, 효과, 음악 추가는 할 수 없습니다</li>
 <li>MKV 파일은 MP4로 저장됩니다. 원본 MKV 파일을 대치(덮어쓰기)할 수는 없습니다</li>
 <li>VP9, AV1 동영상은 일부 Mac에서 열리지 않을 수 있습니다</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>모든 게 빠른 동영상 자르기 앱</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#ko">개인정보 처리방침</a> · <a href="licenses.html">오픈 소스 라이선스</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">지원</a>
   <span>© 2026 Shohei Namba</span>
@@ -279,32 +468,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="pt-BR" lang="pt-BR">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>Rápido em tudo<br><em>Só para cortar vídeo</em></h1>
     <p class="sub">Cortar um vídeo não exige um editor completo.<br>Abra, corte e salve. Nada é recodificado.</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-pt-br.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">MP4 / MOV / MKV, inclusive gravações de lives</p>
+    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV, inclusive gravações de lives</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>Corte antes de importar</h2>
+<div class="section-heading"><span></span><h2>Corte antes de importar</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>Abre na hora, sem criar projeto</b><span>Sem biblioteca, sem importar. Edite assim que abrir.</span></li>
-<li><span class="ic">⌨️</span><b>Cortes rápidos com atalhos</b><span>E divide, R exclui, JKL para navegar. Reatribua qualquer tecla.</span></li>
-<li><span class="ic">⚡️</span><b>Salva rápido, sem recodificar</b><span>Sem esperar a exportação. Imagem e som intactos.</span></li>
-<li><span class="ic">✂️</span><b>Recorte várias cenas de uma vez</b><span>Cenas espalhadas saem em uma única exportação.</span></li>
-<li><span class="ic">🔍</span><b>Encontre rápido: forma de onda e miniaturas</b><span>Silêncios e trechos parados saltam aos olhos.</span></li>
-<li><span class="ic">💾</span><b>Substituir ou salvar como novo</b><span>Substituir economiza espaço e tempo de transferência.</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Abre na hora, sem criar projeto</b><span>Sem biblioteca, sem importar. Edite assim que abrir.</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Cortes rápidos com atalhos</b><span>E divide, R exclui, JKL para navegar. Reatribua qualquer tecla.</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Salva rápido, sem recodificar</b><span>Sem esperar a exportação. Imagem e som intactos.</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Recorte várias cenas de uma vez</b><span>Cenas espalhadas saem em uma única exportação.</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Encontre rápido: forma de onda e miniaturas</b><span>Silêncios e trechos parados saltam aos olhos.</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Substituir ou salvar como novo</b><span>Substituir economiza espaço e tempo de transferência.</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>Preço</h2>
-<p class="price">As 20 primeiras exportações são grátis. Depois, a compra dentro do app “QuickCut Unlimited” remove o limite. Compra única, sem assinatura.</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>Preço</h2>
+  <p class="price">As 20 primeiras exportações são grátis. Depois, a compra dentro do app “QuickCut Unlimited” remove o limite. Compra única, sem assinatura.</p>
+</div>
+<div class="notes-block">
 <h2>Atenção</h2>
 <ul class="notes">
 <li>O QuickCut só corta. Não adiciona títulos, efeitos nem música</li>
 <li>Arquivos MKV são salvos como MP4; não dá para substituir um MKV</li>
 <li>Vídeos VP9 e AV1 podem não abrir em alguns Macs</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-pt-br.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Rápido em tudo Só para cortar vídeo</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-pt-br.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#pt-BR">Política de Privacidade</a> · <a href="licenses.html">Licenças de código aberto</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Suporte</a>
   <span>© 2026 Shohei Namba</span>
@@ -313,32 +525,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="zh-Hans" lang="zh-Hans">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>剪视频<br><em>每一步都快</em></h1>
     <p class="sub">只是剪一段视频，不需要庞大的剪辑软件。<br>打开、剪、保存。不重新编码。</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-zh-cn.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">格式：MP4 / MOV / MKV（直播录像也能开）</p>
+    <p class="formats"><span aria-hidden="true"></span>格式：MP4 / MOV / MKV（直播录像也能开）</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>先剪好 再导入</h2>
+<div class="section-heading"><span></span><h2>先剪好 再导入</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>打开就能剪，不用建项目</b><span>没有资源库，无需导入。打开的那一刻就开始剪。</span></li>
-<li><span class="ic">⌨️</span><b>快捷键，剪得快</b><span>E 分割，R 删除，JKL 快进快退。按键随你改。</span></li>
-<li><span class="ic">⚡️</span><b>不重新编码，保存飞快</b><span>导出不用等。画面和声音原样保留。</span></li>
-<li><span class="ic">✂️</span><b>多个场景一次剪出</b><span>分散在各处的场景，一次导出。</span></li>
-<li><span class="ic">🔍</span><b>波形＋缩略图，一眼找到</b><span>静音段和废镜头一目了然。</span></li>
-<li><span class="ic">💾</span><b>替换原文件，或存为新文件</b><span>替换原文件，省空间也省传输时间。</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>打开就能剪，不用建项目</b><span>没有资源库，无需导入。打开的那一刻就开始剪。</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>快捷键，剪得快</b><span>E 分割，R 删除，JKL 快进快退。按键随你改。</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>不重新编码，保存飞快</b><span>导出不用等。画面和声音原样保留。</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>多个场景一次剪出</b><span>分散在各处的场景，一次导出。</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>波形＋缩略图，一眼找到</b><span>静音段和废镜头一目了然。</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>替换原文件，或存为新文件</b><span>替换原文件，省空间也省传输时间。</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>价格</h2>
-<p class="price">前 20 次导出免费。之后通过 App 内购买“QuickCut Unlimited”解除次数限制。一次买断，无需订阅。</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>价格</h2>
+  <p class="price">前 20 次导出免费。之后通过 App 内购买“QuickCut Unlimited”解除次数限制。一次买断，无需订阅。</p>
+</div>
+<div class="notes-block">
 <h2>请注意</h2>
 <ul class="notes">
 <li>QuickCut 只做剪切。不能加标题、特效或配乐</li>
 <li>MKV 文件会保存为 MP4，不能替换原 MKV 文件</li>
 <li>VP9 和 AV1 视频在部分 Mac 上可能无法打开</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-zh-cn.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>剪视频 每一步都快</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-zh-cn.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#zh-Hans">隐私政策</a> · <a href="licenses.html">开源许可证</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">支持</a>
   <span>© 2026 Shohei Namba</span>
@@ -347,32 +582,55 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
 <section id="zh-Hant" lang="zh-Hant">
 <header class="hero">
   <div class="hero-text">
+    <p class="eyebrow">QuickCut <span>for Mac</span></p>
     <h1>剪影片<br><em>每一步都快</em></h1>
     <p class="sub">只是剪一段影片，不需要笨重的剪輯軟體。<br>打開、剪、儲存。不重新編碼。</p>
     <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats">格式：MP4 / MOV / MKV（直播錄影也能開）</p>
+    <p class="formats"><span aria-hidden="true"></span>格式：MP4 / MOV / MKV（直播錄影也能開）</p>
   </div>
-  <img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager">
+  <div class="hero-visual"><img class="shot" src="assets/screenshot-en.jpg" alt="QuickCut" width="1600" loading="eager"></div>
 </header>
-<h2>先剪好 再匯入</h2>
+<div class="section-heading"><span></span><h2>先剪好 再匯入</h2></div>
 <ul class="features">
-<li><span class="ic">📂</span><b>打開就能剪，不必建專案</b><span>沒有資料庫，不必匯入。打開的那一刻就開始剪。</span></li>
-<li><span class="ic">⌨️</span><b>快速鍵，剪得快</b><span>E 分割，R 刪除，JKL 倒轉快轉。按鍵隨你改。</span></li>
-<li><span class="ic">⚡️</span><b>不重新編碼，儲存飛快</b><span>匯出不必等。畫面和聲音原封不動。</span></li>
-<li><span class="ic">✂️</span><b>多個場景一次剪出</b><span>分散各處的場景，一次匯出。</span></li>
-<li><span class="ic">🔍</span><b>波形＋縮圖，一眼找到</b><span>靜音段和廢鏡頭一目了然。</span></li>
-<li><span class="ic">💾</span><b>取代原檔，或另存新檔</b><span>取代原檔，省空間也省傳輸時間。</span></li>
+<li class="feature feature-nofile">
+  <div class="visual visual-open" aria-hidden="true"><img src="assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>打開就能剪，不必建專案</b><span>沒有資料庫，不必匯入。打開的那一刻就開始剪。</span></div>
+</li>
+<li class="feature feature-keyboard">
+  <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>快速鍵，剪得快</b><span>E 分割，R 刪除，JKL 倒轉快轉。按鍵隨你改。</span></div>
+</li>
+<li class="feature feature-wave">
+  <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>不重新編碼，儲存飛快</b><span>匯出不必等。畫面和聲音原封不動。</span></div>
+</li>
+<li class="feature feature-multiscene">
+  <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>多個場景一次剪出</b><span>分散各處的場景，一次匯出。</span></div>
+</li>
+<li class="feature feature-search">
+  <div class="visual visual-wave" aria-hidden="true"><i></i></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>波形＋縮圖，一眼找到</b><span>靜音段和廢鏡頭一目了然。</span></div>
+</li>
+<li class="feature feature-storage">
+  <div class="visual visual-save" aria-hidden="true"><i></i><b></b><span></span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>取代原檔，或另存新檔</b><span>取代原檔，省空間也省傳輸時間。</span></div>
+</li>
 </ul>
-<img class="shot2" src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy">
-<h2>價格</h2>
-<p class="price">前 20 次匯出免費。之後透過 App 內購買「QuickCut Unlimited」解除次數限制。一次買斷，不用訂閱。</p>
+<figure class="detail"><div><img src="assets/screenshot2-en.jpg" alt="" width="1600" loading="lazy"></div></figure>
+<div class="pricing">
+  <h2>價格</h2>
+  <p class="price">前 20 次匯出免費。之後透過 App 內購買「QuickCut Unlimited」解除次數限制。一次買斷，不用訂閱。</p>
+</div>
+<div class="notes-block">
 <h2>請注意</h2>
 <ul class="notes">
 <li>QuickCut 只做一件事：剪掉不要的部分。不能加標題、特效或配樂</li>
 <li>MKV 檔案會儲存為 MP4，不能取代原 MKV 檔案</li>
 <li>VP9 和 AV1 影片在部分 Mac 上可能無法開啟</li>
 </ul>
-<p class="cta"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a></p>
+</div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>剪影片 每一步都快</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="assets/badge-en-us.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="privacy.html#zh-Hant">隱私權政策</a> · <a href="licenses.html">開放原始碼授權</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">支援</a>
   <span>© 2026 Shohei Namba</span>
@@ -395,11 +653,12 @@ footer a { color:var(--muted); } footer span { margin-left:auto; }
   }
   function show(code) {
     document.querySelectorAll('section').forEach(function (s) { s.classList.toggle('active', s.id === code); });
-    document.querySelectorAll('nav a').forEach(function (a) { a.setAttribute('aria-current', a.dataset.lang === code ? 'true' : 'false'); });
+    document.getElementById('language').value = code;
     document.documentElement.lang = code;
   }
   document.body.classList.add('js'); show(pick());
   window.addEventListener('hashchange', function () { show(pick()); window.scrollTo(0, 0); });
+  document.getElementById('language').addEventListener('change', function (event) { location.hash = event.target.value; });
 })();
 </script>
 </body>
