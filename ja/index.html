@@ -71,73 +71,86 @@ footer { display:flex; flex-wrap:wrap; gap:8px; padding:22px 0 4px; border-top:1
 <link rel="alternate" hreflang="zh-Hans" href="https://nbashohei.github.io/quickcut-info/zh-hans/">
 <link rel="alternate" hreflang="zh-Hant" href="https://nbashohei.github.io/quickcut-info/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://nbashohei.github.io/quickcut-info/">
+<link rel="stylesheet" href="../assets/landing-page.css">
+<link rel="preload" as="image" href="../assets/quickcut-demo-poster.jpg" fetchpriority="high">
 </head>
 
 <body>
 <div class="top"><a class="brand" href="../" aria-label="QuickCut home"><img src="../assets/icon-512.png" alt=""><span class="brand-name"><b>QuickCut</b><small>FOR MAC</small></span></a><nav class="language-links" aria-label="Language"><a href="../ja/" aria-current="page">日本語</a> <a href="../en/">English</a> <a href="../de/">Deutsch</a> <a href="../es/">Español</a> <a href="../fr/">Français</a> <a href="../it/">Italiano</a> <a href="../ko/">한국어</a> <a href="../pt-br/">Português (Brasil)</a> <a href="../zh-hans/">简体中文</a> <a href="../zh-hant/">繁體中文</a></nav></div>
 
-<section id="ja" lang="ja">
+<main id="ja" lang="ja" class="landing">
 <header class="hero">
   <div class="hero-text">
-    <p class="eyebrow">QuickCut <span>— Mac用動画カットアプリ</span></p>
-    <h1>ぜんぶ速い<br><em>動画カットアプリ</em></h1>
-    <p class="sub">動画を切るだけに重い編集ソフトはいらない<br>開いてすぐ切って無劣化のまま保存</p>
-    <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV対応 — OBSの配信録画にも</p>
-    <p class="requirements">macOS 14+</p>
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Mac用動画カットアプリ</p>
+    <h1><span class="headline-lead">動画を切って</span> <em>すぐ次の作業へ</em></h1>
+    <p class="sub">Finderから開いて 不要な部分をカットして保存<br>本格的な編集の前にも 動画を少し短くしたいときにも</p>
+    <div class="hero-actions"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a><a class="trial-link" href="#pricing">書き出し20回まで全機能無料 <span aria-hidden="true">↗</span></a></div>
+    <p class="requirements">macOS 14+ <span aria-hidden="true">·</span> MP4 / MOV / MKV</p>
   </div>
-  <div class="hero-visual"><img class="shot" src="../assets/screenshot-ja.jpg" alt="Mac用QuickCutで動画をプレビューし、紫の選択範囲と波形を表示した編集画面" width="2000" height="1348" loading="eager" fetchpriority="high"></div>
 </header>
-<div class="section-heading"><span></span><h2>取り込む前に 必要なところだけ</h2></div>
+<figure class="demo" aria-labelledby="demo-caption">
+  <div class="demo-screen">
+    <video id="product-demo" width="1920" height="1080" muted loop playsinline controls preload="none" poster="../assets/quickcut-demo-poster.jpg" aria-label="Finderから開く → カット → 上書き保存">
+      <source data-src="../assets/quickcut-demo-1080p.mp4" type="video/mp4">
+      <a href="../assets/quickcut-demo-1080p.mp4">デモ動画を開く</a>
+    </video>
+  </div>
+  <figcaption id="demo-caption"><div><strong>Finderから開く → カット → 上書き保存</strong><span>実際のアプリ画面を使った操作デモ · 8秒</span></div><button class="demo-toggle" type="button" hidden aria-controls="product-demo" data-play="デモを再生" data-pause="一時停止">デモを再生</button><noscript><a href="../assets/quickcut-demo-1080p.mp4">デモ動画を開く</a></noscript></figcaption>
+</figure>
+<p class="local-note">動画はMacの中で処理 アップロードもアカウントも不要</p>
+<div class="section-heading"><span></span><h2>カットに必要なことだけを すばやく</h2></div>
 <ul class="features">
 <li class="feature feature-nofile">
   <div class="visual visual-open" aria-hidden="true"><img src="../assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>プロジェクト不要ですぐ開く</b><span>ライブラリも読み込み待ちもなし。開いた瞬間から編集。</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><h3>プロジェクト不要ですぐ開く</h3><span>ライブラリも読み込み待ちもなし 開いた瞬間から編集</span></div>
 </li>
 <li class="feature feature-keyboard">
   <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>ショートカットで高速カット</b><span>E・R で切って JKL で探す。キー割り当ては自分好みに。</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><h3>ショートカットで高速カット</h3><span>E・R で切って JKL で探す キー割り当ては自分好みに</span></div>
 </li>
 <li class="feature feature-wave">
   <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>再エンコードなしで高速保存</b><span>書き出しを待たない。画質も音質も、そのまま 100%。</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><h3>動画全体を再変換せずに保存</h3><span>カットの境界だけを処理 残りの映像はそのままコピーするスマートカット</span></div>
 </li>
-<li class="feature feature-multiscene">
+</ul>
+<div class="workflow" id="obs-mkv">
+  <div class="workflow-copy"><p class="eyebrow">OBS / MKV</p><h2>OBSのMKV録画を Macで切り抜く</h2>
+  <p>OBSで録画したMKVをQuickCutで開き 波形とサムネイルで必要な場面を探す 編集点を追加して残したい区間を選び MP4として書き出せます 配信アーカイブの切り抜きや 本格的な編集に取り込む前のラフカットに</p>
+  <a class="text-link" href="#format-details">対応形式とMKVの注意点 <span aria-hidden="true">↗</span></a></div>
+  <figure class="detail"><img src="../assets/screenshot2-ja.jpg" alt="QuickCutの動画カット画面。タイムラインの2つの編集点と選択クリップ" width="2000" height="1348" loading="lazy"></figure>
+</div>
+<div class="section-heading"><span></span><h2>短い操作で 細かいところまで</h2></div>
+<ul class="features secondary-features"><li class="feature feature-multiscene">
   <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>複数シーンをまとめて切り抜き</b><span>離れたシーンも一括書き出し</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><h3>複数シーンをまとめて切り抜き</h3><span>離れたシーンも一括書き出し</span></div>
 </li>
 <li class="feature feature-search">
   <div class="visual visual-wave" aria-hidden="true"><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>波形＆サムネイルですぐ見つかる</b><span>無音や不要なシーンが、ひと目で分かる。</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><h3>波形＆サムネイルですぐ見つかる</h3><span>無音や不要なシーンが ひと目で分かる</span></div>
 </li>
 <li class="feature feature-recording">
   <div class="visual visual-recording" aria-hidden="true"><svg viewBox="0 0 280 128" fill="none"><rect x="37" y="28" width="138" height="76" rx="7" stroke="currentColor" stroke-width="2"/><path d="M37 45H175" stroke="currentColor" stroke-width="2"/><circle cx="48" cy="36" r="3" fill="currentColor"/><path d="M97 59L97 88L121 74Z" fill="currentColor"/><path d="M177 73H199M193 67L199 73L193 79" stroke="currentColor" stroke-width="2"/><rect x="207" y="45" width="39" height="55" rx="4" stroke="currentColor" stroke-width="2"/><path d="M217 64H237M217 72H237M217 80H229" stroke="currentColor" stroke-width="2"/></svg><span>OBS · MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>OBSの配信録画も再生・編集可能</b><span>MKVの録画をそのまま開いて、見どころを切り抜き。保存はMP4で。</span></div>
-</li>
-</ul>
-<figure class="detail"><div><img src="../assets/screenshot2-ja.jpg" alt="QuickCutの動画カット画面。タイムラインの2つの編集点と選択クリップ" width="2000" height="1348" loading="lazy"></div></figure>
-<div class="workflow" id="obs-mkv">
-  <h2>OBSのMKV録画を、Macで切り抜く</h2>
-  <p>OBSで録画したMKVをQuickCutで開き、波形とサムネイルで必要な場面を探す。編集点を追加して残したい区間を選び、MP4として書き出せます。配信アーカイブの切り抜きや、本格的な編集に取り込む前のラフカットに。</p>
-  <p class="compatibility">H.264／HEVC映像・AAC音声の録画に対応。MKVへの上書き保存はできません。VP9は非対応、AV1はMacのデコーダに依存します。非対応音声や字幕が含まれる場合は、除外される内容を読み込み前に表示します。</p>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><h3>OBSの配信録画も再生・編集可能</h3><span>MKVの録画をそのまま開いて 見どころを切り抜き 保存はMP4で</span></div>
+</li></ul>
+<div class="pricing" id="pricing">
+  <div class="pricing-intro"><p class="eyebrow">QuickCut for Mac</p><h2>無料で全機能試せる</h2><p>書き出し20回までは 全機能を無料で利用できます それ以降はApp内課金「QuickCut Unlimited」（¥1,800・買い切り）で 書き出し回数が無制限になります 月額料金はありません</p><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a></div>
+  <div class="price-options">
+    <div class="price-option"><h3>全機能を無料で</h3><p class="price-value">20回</p><p>の書き出し</p></div>
+    <div class="price-option unlimited"><h3>QuickCut Unlimited</h3><p class="price-value">¥1,800</p><p>買い切り · App内課金</p><small>書き出し回数が無制限に 月額料金なし</small></div>
+  </div>
 </div>
-<div class="pricing">
-  <h2>無料で全機能試せる</h2>
-  <p class="price">書き出し20回までは、全機能を無料で利用できます。それ以降はApp内課金「QuickCut Unlimited」（¥1,800・買い切り）で、書き出し回数が無制限になります。月額料金はありません。</p>
+<div class="notes-block" id="format-details">
+  <details><summary>対応形式とMKVの注意点</summary><p>MP4 / MOV / MKV対応 — OBSの配信録画にも</p><p>H.264／HEVC映像・AAC音声の録画に対応 MKVへの上書き保存はできません VP9は非対応 AV1はMacのデコーダに依存します 非対応音声や字幕が含まれる場合は 除外される内容を読み込み前に表示します</p></details>
+  <details><summary>ご注意</summary><ul class="notes"><li>カット専用です テロップ エフェクト BGMの追加はできません</li>
+<li>.mkvは保存時にMP4になります .mkvへの上書きはできません</li>
+<li>VP9やAV1の動画は お使いのMacによっては開けません</li></ul></details>
 </div>
-<div class="notes-block">
-<h2>ご注意</h2>
-<ul class="notes">
-<li>カット専用です。テロップ、エフェクト、BGMの追加はできません</li>
-<li>.mkvは保存時にMP4になります。.mkvへの上書きはできません</li>
-<li>VP9やAV1の動画は、お使いのMacによっては開けません</li>
-</ul>
-</div>
-<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>ぜんぶ速い 動画カットアプリ</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a></div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>動画を切って すぐ次の作業へ</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ja-jp.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="../privacy.html#ja">プライバシーポリシー</a> · <a href="../licenses.html">オープンソースライセンス</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">サポート</a>
   <span>© 2026 Shohei Namba</span>
 </footer>
-</section>
+</main>
+<script src="../assets/landing-page-demo.js" defer></script>
 </body>
 </html>
