@@ -71,73 +71,86 @@ footer { display:flex; flex-wrap:wrap; gap:8px; padding:22px 0 4px; border-top:1
 <link rel="alternate" hreflang="zh-Hans" href="https://nbashohei.github.io/quickcut-info/zh-hans/">
 <link rel="alternate" hreflang="zh-Hant" href="https://nbashohei.github.io/quickcut-info/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://nbashohei.github.io/quickcut-info/">
+<link rel="stylesheet" href="../assets/landing-page.css">
+<link rel="preload" as="image" href="../assets/quickcut-demo-ko-poster.jpg" fetchpriority="high">
 </head>
 
 <body>
 <div class="top"><a class="brand" href="../" aria-label="QuickCut home"><img src="../assets/icon-512.png" alt=""><span class="brand-name"><b>QuickCut</b><small>FOR MAC</small></span></a><nav class="language-links" aria-label="Language"><a href="../ja/">日本語</a> <a href="../en/">English</a> <a href="../de/">Deutsch</a> <a href="../es/">Español</a> <a href="../fr/">Français</a> <a href="../it/">Italiano</a> <a href="../ko/" aria-current="page">한국어</a> <a href="../pt-br/">Português (Brasil)</a> <a href="../zh-hans/">简体中文</a> <a href="../zh-hant/">繁體中文</a></nav></div>
 
-<section id="ko" lang="ko">
+<main id="ko" lang="ko" class="landing">
 <header class="hero">
   <div class="hero-text">
-    <p class="eyebrow">QuickCut <span>— Mac용 동영상 자르기 앱</span></p>
-    <h1>모든 게 빠른<br><em>동영상 자르기 앱</em></h1>
-    <p class="sub">동영상 자르기에 무거운 편집 프로그램은 필요 없습니다<br>열어서 자르고 저장. 재인코딩은 하지 않습니다</p>
-    <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV 지원 — OBS 방송 녹화본도</p>
-    <p class="requirements">macOS 14+</p>
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Mac용 동영상 자르기 앱</p>
+    <h1><span class="headline-lead">모든 작업을 빠르게</span> <em>Mac 동영상 자르기 앱</em></h1>
+    <p class="sub">Finder에서 열고 불필요한 부분을 잘라 저장하세요<br>편집하거나 보관하기 전에 저장 공간을 절약하세요<br>AI 편집 전 토큰 사용량을 줄이는 데도 유용합니다</p>
+    <div class="hero-actions"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a><a class="trial-link" href="#pricing">20회 내보내기까지 모든 기능 무료 <span aria-hidden="true">↗</span></a></div>
+    <p class="requirements">macOS 14+ <span aria-hidden="true">·</span> MP4 / MOV / MKV</p>
   </div>
-  <div class="hero-visual"><img class="shot" src="../assets/screenshot-ko.jpg" alt="동영상 미리보기, 보라색 클립 선택 영역과 오디오 파형이 표시된 Mac용 QuickCut" width="2000" height="1348" loading="eager" fetchpriority="high"></div>
 </header>
-<div class="section-heading"><span></span><h2>편집 프로그램에 넣기 전, 필요한 부분만</h2></div>
+<figure class="demo" aria-labelledby="demo-caption">
+  <div class="demo-screen">
+    <video id="product-demo" width="1920" height="1080" muted loop playsinline controls preload="none" poster="../assets/quickcut-demo-ko-poster.jpg" aria-label="Finder에서 열기 → 자르기 → 덮어쓰기">
+      <source data-src="../assets/quickcut-demo-ko-1080p.mp4" type="video/mp4">
+      <a href="../assets/quickcut-demo-ko-1080p.mp4">데모 열기</a>
+    </video>
+  </div>
+  <figcaption id="demo-caption"><div><strong>Finder에서 열기 → 자르기 → 덮어쓰기</strong><span>실제 앱 화면으로 만든 8초 데모</span></div><button class="demo-toggle" type="button" hidden aria-controls="product-demo" data-play="데모 재생" data-pause="일시 정지">데모 재생</button><noscript><a href="../assets/quickcut-demo-ko-1080p.mp4">데모 열기</a></noscript></figcaption>
+</figure>
+<p class="local-note">동영상은 Mac 안에서 처리 업로드도 계정도 필요 없음</p>
+<div class="section-heading"><span></span><h2>빠르게 자르는 데 필요한 기능만</h2></div>
 <ul class="features">
 <li class="feature feature-nofile">
   <div class="visual visual-open" aria-hidden="true"><img src="../assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>프로젝트 없이 바로 열기</b><span>라이브러리도 불러오기도 없이, 열리는 순간부터 편집</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><h3>프로젝트 없이 바로 열기</h3><span>라이브러리도 불러오기도 없이, 열리는 순간부터 편집</span></div>
 </li>
 <li class="feature feature-keyboard">
   <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>단축키로 빠르게 자르기</b><span>E로 분할, R로 삭제, JKL로 탐색 키 할당은 원하는 대로 바꿀 수 있습니다</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><h3>단축키로 빠르게 자르기</h3><span>E로 분할, R로 삭제, JKL로 탐색 키 할당은 원하는 대로 바꿀 수 있습니다</span></div>
 </li>
 <li class="feature feature-wave">
   <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>재인코딩 없이 빠르게 저장</b><span>내보내기를 기다릴 필요가 없습니다 화질도 음질도 원본 그대로</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><h3>전체 재인코딩 없이 저장</h3><span>스마트 컷으로 잘린 경계만 처리하고 나머지 영상은 그대로 복사합니다.</span></div>
 </li>
-<li class="feature feature-multiscene">
+</ul>
+<div class="workflow" id="obs-mkv">
+  <div class="workflow-copy"><p class="eyebrow">OBS / MKV</p><h2>OBS의 MKV 형식도 지원</h2>
+  <p>MP4/MOV뿐 아니라 OBS로 녹화한 방송의 MKV 형식도 지원합니다. 방송 클립이나 하이라이트 영상을 더 빠르게 편집하기 시작할 수 있습니다.</p>
+  <a class="text-link" href="#format-details">지원 형식과 MKV 제한 사항 <span aria-hidden="true">↗</span></a></div>
+  <figure class="detail"><img src="../assets/screenshot2-ko.jpg" alt="편집점 두 개와 선택된 클립 하나가 표시된 QuickCut 타임라인" width="2000" height="1348" loading="lazy"></figure>
+</div>
+<div class="section-heading"><span></span><h2>간단한 조작으로 정밀한 편집</h2></div>
+<ul class="features secondary-features"><li class="feature feature-multiscene">
   <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>여러 장면을 한 번에 잘라내기</b><span>떨어져 있는 장면도 한꺼번에 내보냅니다.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><h3>여러 장면을 한 번에 잘라내기</h3><span>떨어져 있는 장면도 한꺼번에 내보냅니다.</span></div>
 </li>
 <li class="feature feature-search">
   <div class="visual visual-wave" aria-hidden="true"><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>파형과 썸네일로 바로 찾기</b><span>무음 구간과 버릴 장면이 한눈에 보입니다.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><h3>파형과 썸네일로 바로 찾기</h3><span>무음 구간과 버릴 장면이 한눈에 보입니다.</span></div>
 </li>
 <li class="feature feature-recording">
   <div class="visual visual-recording" aria-hidden="true"><svg viewBox="0 0 280 128" fill="none"><rect x="37" y="28" width="138" height="76" rx="7" stroke="currentColor" stroke-width="2"/><path d="M37 45H175" stroke="currentColor" stroke-width="2"/><circle cx="48" cy="36" r="3" fill="currentColor"/><path d="M97 59L97 88L121 74Z" fill="currentColor"/><path d="M177 73H199M193 67L199 73L193 79" stroke="currentColor" stroke-width="2"/><rect x="207" y="45" width="39" height="55" rx="4" stroke="currentColor" stroke-width="2"/><path d="M217 64H237M217 72H237M217 80H229" stroke="currentColor" stroke-width="2"/></svg><span>OBS · MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>OBS 방송 녹화본도 재생·편집</b><span>MKV 녹화본을 바로 열어 하이라이트를 자르고 MP4로 저장하세요.</span></div>
-</li>
-</ul>
-<figure class="detail"><div><img src="../assets/screenshot2-ko.jpg" alt="편집점 두 개와 선택된 클립 하나가 표시된 QuickCut 타임라인" width="2000" height="1348" loading="lazy"></div></figure>
-<div class="workflow" id="obs-mkv">
-  <h2>Mac에서 OBS의 MKV 녹화본 자르기</h2>
-  <p>QuickCut에서 OBS의 MKV 녹화본을 열고 파형과 썸네일로 필요한 장면을 찾으세요. 편집점을 추가하고 남길 구간을 선택해 MP4로 내보낼 수 있습니다. 방송 하이라이트를 추출하거나 본격적인 편집 전에 불필요한 부분을 정리할 때 유용합니다.</p>
-  <p class="compatibility">H.264/HEVC 영상과 AAC 오디오로 녹화한 파일을 지원합니다. 원본 MKV는 덮어쓸 수 없습니다. VP9은 지원하지 않으며 AV1은 Mac의 디코더에 따라 다릅니다. 지원하지 않는 오디오 트랙이나 자막은 가져오기 전에 제외 항목으로 표시됩니다.</p>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><h3>OBS 방송 녹화본도 재생·편집</h3><span>MKV 녹화본을 바로 열어 하이라이트를 자르고 MP4로 저장하세요.</span></div>
+</li></ul>
+<div class="pricing" id="pricing">
+  <div class="pricing-intro"><p class="eyebrow">QuickCut for Mac</p><h2>모든 기능을 무료로 체험하세요</h2><p>처음 20회 내보내기까지는 모든 기능을 무료로 이용할 수 있습니다. 더 필요할 때는 앱 내 일회성 구입 “QuickCut Unlimited”로 내보내기 횟수가 무제한이 됩니다. 구독은 없습니다.</p><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a></div>
+  <div class="price-options">
+    <div class="price-option"><h3>모든 기능 무료</h3><p class="price-value">20회</p><p>내보내기</p></div>
+    <div class="price-option unlimited"><h3>QuickCut Unlimited</h3><p class="price-value">일회성 구입</p><p>앱 내 구입</p><small>무제한 내보내기 구독료 없음</small></div>
+  </div>
 </div>
-<div class="pricing">
-  <h2>모든 기능을 무료로 체험하세요</h2>
-  <p class="price">처음 20회 내보내기까지는 모든 기능을 무료로 이용할 수 있습니다. 더 필요할 때는 앱 내 일회성 구입 “QuickCut Unlimited”로 내보내기 횟수가 무제한이 됩니다. 구독은 없습니다.</p>
-</div>
-<div class="notes-block">
-<h2>참고</h2>
-<ul class="notes">
-<li>QuickCut은 자르기만 합니다. 자막, 효과, 음악 추가는 할 수 없습니다</li>
+<div class="notes-block" id="format-details">
+  <details><summary>지원 형식과 MKV 제한 사항</summary><p>MP4 / MOV / MKV 지원 — OBS 방송 녹화본도</p><p>H.264/HEVC 영상과 AAC 오디오로 녹화한 파일을 지원합니다. 원본 MKV는 덮어쓸 수 없습니다. VP9은 지원하지 않으며 AV1은 Mac의 디코더에 따라 다릅니다. 지원하지 않는 오디오 트랙이나 자막은 가져오기 전에 제외 항목으로 표시됩니다.</p></details>
+  <details><summary>참고</summary><ul class="notes"><li>QuickCut은 자르기만 합니다. 자막, 효과, 음악 추가는 할 수 없습니다</li>
 <li>MKV 파일은 MP4로 저장됩니다. 원본 MKV 파일을 대치(덮어쓰기)할 수는 없습니다</li>
-<li>VP9, AV1 동영상은 일부 Mac에서 열리지 않을 수 있습니다</li>
-</ul>
+<li>VP9, AV1 동영상은 일부 Mac에서 열리지 않을 수 있습니다</li></ul></details>
 </div>
-<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>모든 게 빠른 동영상 자르기 앱</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a></div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>모든 작업을 빠르게 Mac 동영상 자르기 앱</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-ko-kr.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="../privacy.html#ko">개인정보 처리방침</a> · <a href="../licenses.html">오픈 소스 라이선스</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">지원</a>
   <span>© 2026 Shohei Namba</span>
 </footer>
-</section>
+</main>
+<script src="../assets/landing-page-demo.js" defer></script>
 </body>
 </html>

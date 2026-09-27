@@ -71,73 +71,86 @@ footer { display:flex; flex-wrap:wrap; gap:8px; padding:22px 0 4px; border-top:1
 <link rel="alternate" hreflang="zh-Hans" href="https://nbashohei.github.io/quickcut-info/zh-hans/">
 <link rel="alternate" hreflang="zh-Hant" href="https://nbashohei.github.io/quickcut-info/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://nbashohei.github.io/quickcut-info/">
+<link rel="stylesheet" href="../assets/landing-page.css">
+<link rel="preload" as="image" href="../assets/quickcut-demo-it-poster.jpg" fetchpriority="high">
 </head>
 
 <body>
 <div class="top"><a class="brand" href="../" aria-label="QuickCut home"><img src="../assets/icon-512.png" alt=""><span class="brand-name"><b>QuickCut</b><small>FOR MAC</small></span></a><nav class="language-links" aria-label="Language"><a href="../ja/">日本語</a> <a href="../en/">English</a> <a href="../de/">Deutsch</a> <a href="../es/">Español</a> <a href="../fr/">Français</a> <a href="../it/" aria-current="page">Italiano</a> <a href="../ko/">한국어</a> <a href="../pt-br/">Português (Brasil)</a> <a href="../zh-hans/">简体中文</a> <a href="../zh-hant/">繁體中文</a></nav></div>
 
-<section id="it" lang="it">
+<main id="it" lang="it" class="landing">
 <header class="hero">
   <div class="hero-text">
-    <p class="eyebrow">QuickCut <span>— Taglio video per Mac</span></p>
-    <h1>Veloce in tutto<br><em>Solo per tagliare video</em></h1>
-    <p class="sub">Per tagliare un video non serve un editor completo.<br>Apri, taglia e salva. Niente ricodifica.</p>
-    <a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-it-it.svg" alt="Mac App Store" height="60"></a>
-    <p class="formats"><span aria-hidden="true"></span>MP4 / MOV / MKV — anche registrazioni OBS</p>
-    <p class="requirements">macOS 14+</p>
+    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Taglio video per Mac</p>
+    <h1><span class="headline-lead">Veloce in ogni passaggio.</span> <em>Taglio video per Mac</em></h1>
+    <p class="sub">Apri dal Finder, taglia il superfluo e salva.<br>Risparmia spazio prima di montare o archiviare i video.<br>Riduci anche i token prima del montaggio con l’IA.</p>
+    <div class="hero-actions"><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-it-it.svg" alt="Mac App Store" height="60"></a><a class="trial-link" href="#pricing">Tutte le funzioni gratis per 20 esportazioni <span aria-hidden="true">↗</span></a></div>
+    <p class="requirements">macOS 14+ <span aria-hidden="true">·</span> MP4 / MOV / MKV</p>
   </div>
-  <div class="hero-visual"><img class="shot" src="../assets/screenshot-it.jpg" alt="QuickCut su Mac con anteprima video, selezione viola del clip e forma d’onda audio" width="2000" height="1348" loading="eager" fetchpriority="high"></div>
 </header>
-<div class="section-heading"><span></span><h2>Taglia prima di importare</h2></div>
+<figure class="demo" aria-labelledby="demo-caption">
+  <div class="demo-screen">
+    <video id="product-demo" width="1920" height="1080" muted loop playsinline controls preload="none" poster="../assets/quickcut-demo-it-poster.jpg" aria-label="Apri dal Finder → Taglia → Sovrascrivi">
+      <source data-src="../assets/quickcut-demo-it-1080p.mp4" type="video/mp4">
+      <a href="../assets/quickcut-demo-it-1080p.mp4">Apri demo</a>
+    </video>
+  </div>
+  <figcaption id="demo-caption"><div><strong>Apri dal Finder → Taglia → Sovrascrivi</strong><span>Demo di 8 secondi con schermate reali</span></div><button class="demo-toggle" type="button" hidden aria-controls="product-demo" data-play="Riproduci demo" data-pause="Pausa">Riproduci demo</button><noscript><a href="../assets/quickcut-demo-it-1080p.mp4">Apri demo</a></noscript></figcaption>
+</figure>
+<p class="local-note">I video restano sul tuo Mac. Nessun upload né account.</p>
+<div class="section-heading"><span></span><h2>Tutto per un taglio rapido</h2></div>
 <ul class="features">
 <li class="feature feature-nofile">
   <div class="visual visual-open" aria-hidden="true"><img src="../assets/finder-icon.png" alt=""><em></em><span>MP4</span><span>MOV</span><span>MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><b>Si apre subito, senza progetto</b><span>Niente libreria, niente importazione. Modifichi appena si apre.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">01</span><h3>Si apre subito, senza progetto</h3><span>Niente libreria, niente importazione. Modifichi appena si apre.</span></div>
 </li>
 <li class="feature feature-keyboard">
   <div class="visual visual-keys" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><b>Tagli rapidi da tastiera</b><span>E divide, R elimina, JKL per scorrere. Riassegna qualsiasi tasto.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">02</span><h3>Tagli rapidi da tastiera</h3><span>E divide, R elimina, JKL per scorrere. Riassegna qualsiasi tasto.</span></div>
 </li>
 <li class="feature feature-wave">
   <div class="visual visual-speed" aria-hidden="true"><i></i><span></span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><b>Salva subito, senza ricodifica</b><span>Nessuna attesa per esportare. Immagine e audio restano intatti.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">03</span><h3>Salva senza ricodificare tutto</h3><span>Il taglio intelligente elabora solo i bordi dei tagli e copia il resto del video senza modifiche.</span></div>
 </li>
-<li class="feature feature-multiscene">
+</ul>
+<div class="workflow" id="obs-mkv">
+  <div class="workflow-copy"><p class="eyebrow">OBS / MKV</p><h2>Supporta anche il formato MKV di OBS</h2>
+  <p>Oltre a MP4 e MOV, QuickCut supporta le registrazioni delle dirette salvate da OBS in formato MKV. Inizia più rapidamente a montare estratti delle dirette e video riepilogativi.</p>
+  <a class="text-link" href="#format-details">Formati supportati e limiti di MKV <span aria-hidden="true">↗</span></a></div>
+  <figure class="detail"><img src="../assets/screenshot2-it.jpg" alt="Timeline di QuickCut con due punti di taglio e un clip selezionato" width="2000" height="1348" loading="lazy"></figure>
+</div>
+<div class="section-heading"><span></span><h2>Comandi semplici e tagli precisi</h2></div>
+<ul class="features secondary-features"><li class="feature feature-multiscene">
   <div class="visual visual-scenes" aria-hidden="true"><i></i><i></i><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><b>Ritaglia più scene in una volta</b><span>Le scene sparse si esportano in un colpo solo.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">04</span><h3>Ritaglia più scene in una volta</h3><span>Le scene sparse si esportano in un colpo solo.</span></div>
 </li>
 <li class="feature feature-search">
   <div class="visual visual-wave" aria-hidden="true"><i></i></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><b>Trova subito: forma d’onda e miniature</b><span>Silenzi e tempi morti si vedono a colpo d’occhio.</span></div>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">05</span><h3>Trova subito: forma d’onda e miniature</h3><span>Silenzi e tempi morti si vedono a colpo d’occhio.</span></div>
 </li>
 <li class="feature feature-recording">
   <div class="visual visual-recording" aria-hidden="true"><svg viewBox="0 0 280 128" fill="none"><rect x="37" y="28" width="138" height="76" rx="7" stroke="currentColor" stroke-width="2"/><path d="M37 45H175" stroke="currentColor" stroke-width="2"/><circle cx="48" cy="36" r="3" fill="currentColor"/><path d="M97 59L97 88L121 74Z" fill="currentColor"/><path d="M177 73H199M193 67L199 73L193 79" stroke="currentColor" stroke-width="2"/><rect x="207" y="45" width="39" height="55" rx="4" stroke="currentColor" stroke-width="2"/><path d="M217 64H237M217 72H237M217 80H229" stroke="currentColor" stroke-width="2"/></svg><span>OBS · MKV</span></div>
-  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><b>Riproduci e taglia le registrazioni OBS</b><span>Apri direttamente i file MKV, ritaglia i momenti delle dirette e salva in MP4.</span></div>
-</li>
-</ul>
-<figure class="detail"><div><img src="../assets/screenshot2-it.jpg" alt="Timeline di QuickCut con due punti di taglio e un clip selezionato" width="2000" height="1348" loading="lazy"></div></figure>
-<div class="workflow" id="obs-mkv">
-  <h2>Taglia le registrazioni MKV di OBS su Mac</h2>
-  <p>Apri una registrazione MKV di OBS in QuickCut e trova la scena con la forma d’onda e le miniature. Aggiungi punti di taglio, seleziona le parti da conservare ed esportale in MP4. Per estrarre i momenti migliori di una diretta o preparare un primo taglio prima di importarlo nel tuo editor.</p>
-  <p class="compatibility">Supporta registrazioni con video H.264/HEVC e audio AAC. I file MKV originali non possono essere sovrascritti. VP9 non è supportato; AV1 dipende dal decoder del Mac. Le tracce audio e i sottotitoli non supportati vengono elencati prima dell’importazione per verificare cosa sarà escluso.</p>
+  <div class="feature-copy"><span class="feature-number" aria-hidden="true">06</span><h3>Riproduci e taglia le registrazioni OBS</h3><span>Apri direttamente i file MKV, ritaglia i momenti delle dirette e salva in MP4.</span></div>
+</li></ul>
+<div class="pricing" id="pricing">
+  <div class="pricing-intro"><p class="eyebrow">QuickCut for Mac</p><h2>Prova gratis tutte le funzioni</h2><p>Usa tutte le funzioni gratis per le prime 20 esportazioni. Quando ti serve di più, l’acquisto una tantum in-app “QuickCut Unlimited” sblocca esportazioni illimitate. Nessun abbonamento.</p><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-it-it.svg" alt="Mac App Store" height="60"></a></div>
+  <div class="price-options">
+    <div class="price-option"><h3>Tutte le funzioni gratis</h3><p class="price-value">20</p><p>esportazioni</p></div>
+    <div class="price-option unlimited"><h3>QuickCut Unlimited</h3><p class="price-value">Acquisto unico</p><p>Acquisto in-app</p><small>Esportazioni illimitate. Nessun abbonamento.</small></div>
+  </div>
 </div>
-<div class="pricing">
-  <h2>Prova gratis tutte le funzioni</h2>
-  <p class="price">Usa tutte le funzioni gratis per le prime 20 esportazioni. Quando ti serve di più, l’acquisto una tantum in-app “QuickCut Unlimited” sblocca esportazioni illimitate. Nessun abbonamento.</p>
-</div>
-<div class="notes-block">
-<h2>Da sapere</h2>
-<ul class="notes">
-<li>QuickCut taglia e basta. Non aggiunge titoli, effetti o musica</li>
+<div class="notes-block" id="format-details">
+  <details><summary>Formati supportati e limiti di MKV</summary><p>MP4 / MOV / MKV — anche registrazioni OBS</p><p>Supporta registrazioni con video H.264/HEVC e audio AAC. I file MKV originali non possono essere sovrascritti. VP9 non è supportato; AV1 dipende dal decoder del Mac. Le tracce audio e i sottotitoli non supportati vengono elencati prima dell’importazione per verificare cosa sarà escluso.</p></details>
+  <details><summary>Da sapere</summary><ul class="notes"><li>QuickCut taglia e basta. Non aggiunge titoli, effetti o musica</li>
 <li>I file MKV vengono salvati come MP4; non è possibile sostituire un MKV</li>
-<li>I video VP9 e AV1 potrebbero non aprirsi su alcuni Mac</li>
-</ul>
+<li>I video VP9 e AV1 potrebbero non aprirsi su alcuni Mac</li></ul></details>
 </div>
-<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Veloce in tutto Solo per tagliare video</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-it-it.svg" alt="Mac App Store" height="60"></a></div>
+<div class="cta"><div><p>QuickCut <span>for Mac</span></p><h2>Veloce in ogni passaggio. Taglio video per Mac</h2></div><a class="badge" href="https://apps.apple.com/app/id6787743606"><img src="../assets/badge-it-it.svg" alt="Mac App Store" height="60"></a></div>
 <footer>
   <a href="../privacy.html#it">Informativa sulla privacy</a> · <a href="../licenses.html">Licenze open source</a> · <a href="mailto:nbash0926i@gmail.com?subject=QuickCut">Supporto</a>
   <span>© 2026 Shohei Namba</span>
 </footer>
-</section>
+</main>
+<script src="../assets/landing-page-demo.js" defer></script>
 </body>
 </html>
