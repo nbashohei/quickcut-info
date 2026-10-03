@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickCut Help</title>
+<meta name="description" content="How to open, cut, and save videos with QuickCut, plus keyboard shortcuts and troubleshooting.">
+<link rel="icon" href="assets/icon-512.png">
+<style>
+body { font-family: -apple-system, "Hiragino Sans", "PingFang SC", "PingFang TC", "Apple SD Gothic Neo", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; color: #222; }
+h1 { font-size: 1.6rem; } h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+nav { display: flex; flex-wrap: wrap; gap: .4rem .9rem; font-size: .95rem; margin-bottom: 1.5rem; }
+a { color: #0066cc; } nav a { text-decoration: none; } nav a[aria-current="true"] { font-weight: 600; text-decoration: underline; }
+section + section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ccc; }
+.updated { color: #666; } .toc { font-size: .95rem; } .links { margin-top: 2rem; font-size: .95rem; }
+li { margin: .3rem 0; }
+kbd { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; padding: .05rem .35rem; border: 1px solid #bbb; border-bottom-width: 2px; border-radius: 4px; background: #f6f6f6; white-space: nowrap; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+td:first-child { white-space: nowrap; width: 1%; }
+body.js section { display: none; } body.js section.active { display: block; }
+@media (prefers-color-scheme: dark) { body { background: #1a1a1a; color: #ddd; } section + section { border-top-color: #444; } a { color: #4da3ff; } .updated { color: #999; } kbd { background: #2a2a2a; border-color: #555; } th, td { border-bottom-color: #3a3a3a; } }
+</style>
+</head>
+<body>
+<nav aria-label="Language"><a href="#ja" data-lang="ja">日本語</a> <a href="#en" data-lang="en">English</a> <a href="#de" data-lang="de">Deutsch</a> <a href="#es" data-lang="es">Español</a> <a href="#fr" data-lang="fr">Français</a> <a href="#it" data-lang="it">Italiano</a> <a href="#ko" data-lang="ko">한국어</a> <a href="#pt-BR" data-lang="pt-BR">Português (Brasil)</a> <a href="#zh-Hans" data-lang="zh-Hans">简体中文</a> <a href="#zh-Hant" data-lang="zh-Hant">繁體中文</a></nav>
+
+<section id="ja" lang="ja">
+<h1>QuickCut ヘルプ</h1>
+<p class="updated">最終更新日: 2026年10月3日</p>
+<p class="toc"><b>目次</b>: <a href="#ja-start">動画を開く</a> · <a href="#ja-edit">カットする</a> · <a href="#ja-save">保存する</a> · <a href="#ja-selection">一部だけ書き出す</a> · <a href="#ja-shortcuts">キーボードショートカット</a> · <a href="#ja-settings">設定</a> · <a href="#ja-purchase">無料回数と購入</a> · <a href="#ja-trouble">うまくいかないとき</a></p>
+<h2 id="ja-start">動画を開く</h2>
+<ul><li>ファイルを <b>ウィンドウにドラッグ&ドロップ</b> するか、<b>ファイル &gt; 開く…</b>（<kbd>⌘O</kbd>）で選びます。空のウィンドウをクリックしても開けます。</li><li>Finder で動画を右クリック &gt; <b>このアプリケーションで開く &gt; QuickCut</b> でも開けます。</li><li>1 本の動画につき 1 ウィンドウです。ウィンドウを全部閉じたときは <b>ファイル &gt; 新規ウィンドウ</b>（<kbd>⌘N</kbd>）か Dock のアイコンで開き直せます。</li><li>対応形式: <b>MP4 / MOV</b>（上書き・別名保存とも可）、<b>MKV</b>（開けて MP4 で保存）。</li></ul>
+<h2 id="ja-edit">カットする</h2>
+<ul><li><kbd>Space</kbd> で再生 / 停止、<kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> で巻き戻し・停止・早送り（押すたびに速くなります）。</li><li>要らない部分の始まりと終わりで <kbd>E</kbd>（<b>クリップを分割</b>）を押し、間のクリップを選んで <kbd>R</kbd>（<b>リップル削除</b>）で消します。後ろが自動で詰まります。</li><li><kbd>←</kbd> <kbd>→</kbd> で 1 フレーム、<kbd>⇧</kbd> を足すと 5 フレームずつ動きます（コマ数は設定で変更可）。</li><li>タイムラインはピンチ・<kbd>+</kbd> <kbd>−</kbd>・スクロールでズームできます。波形とサムネイルで無音や不要な場面を探せます。</li><li>間違えたら <kbd>⌘Z</kbd> で取り消し、<kbd>⇧⌘Z</kbd> でやり直しです。</li></ul>
+<h2 id="ja-save">保存する</h2>
+<ul><li><kbd>⌘S</kbd>（<b>保存…</b>）で <b>元のファイルを上書き保存</b> か <b>別名で保存</b> を選びます。<kbd>⇧⌘S</kbd> は常に別名で保存です。</li><li>再エンコードしないので、画質・音質は元のままです。処理するのはカット位置の前後だけなので、書き出しはすぐ終わります。</li><li><kbd>⌘S</kbd> の既定動作（毎回確認 / 常に上書き / 常に別名）は <b>設定 &gt; 保存</b> で変えられます。</li><li>MKV は上書きできず、MP4 として別名で保存されます。</li></ul>
+<h2 id="ja-selection">一部だけ書き出す</h2>
+<ul><li>クリップを <kbd>⇧</kbd>+クリックで範囲選択、<kbd>⌘</kbd>+クリックで追加選択します。</li><li><b>ファイル &gt; 選択範囲を書き出す…</b>（<kbd>⇧⌘E</kbd>）で選んだ部分だけを書き出します。元の動画の編集はそのまま残ります。</li><li>離れた範囲を選んだときは、<b>1 本につなげて書き出す</b> か <b>区間ごとに分けて書き出す</b> を選べます。</li></ul>
+<h2 id="ja-shortcuts">キーボードショートカット</h2>
+<table><thead><tr><th>キー</th><th>操作</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>再生 / 停止</td></tr><tr><td><kbd>J / K / L</kbd></td><td>巻き戻し / 停止 / 早送り</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>クリップを分割</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>リップル削除</td></tr><tr><td><kbd>← / →</kbd></td><td>1 フレーム移動</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>5 フレーム移動</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>前 / 次の編集点へ</td></tr><tr><td><kbd>Home / End</kbd></td><td>先頭 / 末尾へ</td></tr><tr><td><kbd>+ / −</kbd></td><td>ズーム</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>範囲選択 / 追加選択</td></tr><tr><td><kbd>Esc</kbd></td><td>選択解除</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>取り消す / やり直す</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>保存… / 別名で保存…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>選択範囲を書き出す…</td></tr><tr><td><kbd>⌘N</kbd></td><td>新規ウィンドウ</td></tr><tr><td><kbd>⌘O</kbd></td><td>開く…</td></tr><tr><td><kbd>⌘/</kbd></td><td>ショートカット一覧の表示切替</td></tr><tr><td><kbd>⌘,</kbd></td><td>設定…</td></tr></tbody></table>
+<h2 id="ja-settings">設定</h2>
+<ul><li><b>QuickCut &gt; 設定…</b>（<kbd>⌘,</kbd>）で開きます。</li><li><b>一般</b>: 表示言語、矢印キーで動くコマ数など。</li><li><b>保存</b>: <kbd>⌘S</kbd> の既定動作、別名保存のファイル名、選択範囲の書き出し方。</li><li><b>ショートカット</b>: 再生・分割・削除などの単一キーを好きなキーに変えられます。</li><li>編集画面右の一覧は <kbd>⌘/</kbd> で表示 / 非表示を切り替えます。</li></ul>
+<h2 id="ja-purchase">無料回数と購入</h2>
+<ul><li>最初の <b>20 回の書き出し</b> は全機能を無料で使えます。</li><li>それ以降は App 内課金 <b>QuickCut Unlimited</b>（買い切り・サブスクなし）で無制限になります。</li><li>Mac を買い替えたときや再インストール後は、<b>設定 &gt; QuickCut Unlimited &gt; 購入を復元</b> を押してください。購入に使った Apple アカウントで App Store にサインインしている必要があります。</li></ul>
+<h2 id="ja-trouble">うまくいかないとき</h2>
+<ul><li><b>開けない</b>: VP9 / AV1 の動画は Mac によっては開けません。MP4（H.264 / HEVC）への変換をお試しください。</li><li><b>上書きできない</b>: MKV は上書きできません。別名で保存してください。保存先の空き容量も確認してください。</li><li><b>キーが効かない</b>: 編集ウィンドウが前面にあるか確認してください。単一キーは <b>設定 &gt; ショートカット</b> で変更されていることがあります。</li><li><b>動画はどこにも送信されません</b>: 処理はすべて Mac 上で行われ、ネット接続も不要です。</li></ul>
+<h2 id="ja-contact">お問い合わせ</h2>
+<p>ご質問・不具合報告は <b>nbash0926i@gmail.com</b> までお送りください。</p>
+<p class="links"><a href="privacy.html#ja">プライバシーポリシー</a> · <a href="./">トップページ</a></p>
+</section>
+
+<section id="en" lang="en">
+<h1>QuickCut Help</h1>
+<p class="updated">Last updated: October 3, 2026</p>
+<p class="toc"><b>Contents</b>: <a href="#en-start">Opening a Video</a> · <a href="#en-edit">Cutting</a> · <a href="#en-save">Saving</a> · <a href="#en-selection">Exporting Part of a Video</a> · <a href="#en-shortcuts">Keyboard Shortcuts</a> · <a href="#en-settings">Settings</a> · <a href="#en-purchase">Free Exports and Purchase</a> · <a href="#en-trouble">Troubleshooting</a></p>
+<h2 id="en-start">Opening a Video</h2>
+<ul><li><b>Drag a file onto the window</b>, or choose <b>File &gt; Open…</b> (<kbd>⌘O</kbd>). You can also click an empty window.</li><li>In Finder, Control-click a video and choose <b>Open With &gt; QuickCut</b>.</li><li>Each video opens in its own window. If you close every window, choose <b>File &gt; New Window</b> (<kbd>⌘N</kbd>) or click the Dock icon.</li><li>Formats: <b>MP4 and MOV</b> (overwrite or save as new) and <b>MKV</b> (opens, saves as MP4).</li></ul>
+<h2 id="en-edit">Cutting</h2>
+<ul><li><kbd>Space</kbd> plays and pauses. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> rewind, stop, and fast-forward, getting faster with each press.</li><li>Press <kbd>E</kbd> (<b>Split Clip</b>) at the start and end of the part you don’t need, select the clip between them, and press <kbd>R</kbd> (<b>Ripple Delete</b>). The rest closes the gap.</li><li><kbd>←</kbd> <kbd>→</kbd> step one frame. Add <kbd>⇧</kbd> to step 5 frames (you can change this in Settings).</li><li>Zoom the timeline with a pinch, <kbd>+</kbd> <kbd>−</kbd>, or scrolling. The waveform and thumbnails help you spot silence and dead spots.</li><li>Made a mistake? <kbd>⌘Z</kbd> undoes and <kbd>⇧⌘Z</kbd> redoes.</li></ul>
+<h2 id="en-save">Saving</h2>
+<ul><li><kbd>⌘S</kbd> (<b>Save…</b>) lets you choose <b>Replace the original file</b> or <b>Save as a new file</b>. <kbd>⇧⌘S</kbd> always saves a new file.</li><li>Nothing is re-encoded, so picture and sound stay exactly as they were. Only the frames around each cut are processed, so exports finish almost instantly.</li><li>Change what <kbd>⌘S</kbd> does (ask every time, always replace, always save new) in <b>Settings &gt; Saving</b>.</li><li>MKV files can’t be overwritten. They’re saved as a new MP4 file.</li></ul>
+<h2 id="en-selection">Exporting Part of a Video</h2>
+<ul><li><kbd>⇧</kbd>-click clips to select a range. <kbd>⌘</kbd>-click to add to the selection.</li><li><b>File &gt; Export Selection…</b> (<kbd>⇧⌘E</kbd>) exports only the selected clips. Your edits to the full video stay as they are.</li><li>If the selection has gaps, choose <b>Merge into one file</b> or <b>Save as separate files</b>.</li></ul>
+<h2 id="en-shortcuts">Keyboard Shortcuts</h2>
+<table><thead><tr><th>Key</th><th>Action</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Play / Pause</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Rewind / Stop / Fast-Forward</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Split Clip</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Ripple Delete</td></tr><tr><td><kbd>← / →</kbd></td><td>Move one frame</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>Move 5 frames</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Previous / next edit point</td></tr><tr><td><kbd>Home / End</kbd></td><td>Go to start / end</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoom</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Select range / add to selection</td></tr><tr><td><kbd>Esc</kbd></td><td>Deselect</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Undo / Redo</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Save… / Save As…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Export Selection…</td></tr><tr><td><kbd>⌘N</kbd></td><td>New Window</td></tr><tr><td><kbd>⌘O</kbd></td><td>Open…</td></tr><tr><td><kbd>⌘/</kbd></td><td>Show / hide the shortcut list</td></tr><tr><td><kbd>⌘,</kbd></td><td>Settings…</td></tr></tbody></table>
+<h2 id="en-settings">Settings</h2>
+<ul><li>Open <b>QuickCut &gt; Settings…</b> (<kbd>⌘,</kbd>).</li><li><b>General</b>: display language, how many frames the arrow keys step, and more.</li><li><b>Saving</b>: what <kbd>⌘S</kbd> does, the name used for new files, and how selections are exported.</li><li><b>Shortcuts</b>: remap the single keys for play, split, delete, and more.</li><li><kbd>⌘/</kbd> shows or hides the shortcut list on the right of the editor.</li></ul>
+<h2 id="en-purchase">Free Exports and Purchase</h2>
+<ul><li>Your first <b>20 exports</b> are free, with every feature.</li><li>After that, the one-time in-app purchase <b>QuickCut Unlimited</b> unlocks unlimited exports. No subscription.</li><li>On a new Mac or after reinstalling, open <b>Settings &gt; QuickCut Unlimited</b> and click <b>Restore Purchases</b>. Sign in to the App Store with the Apple Account you used to buy it.</li></ul>
+<h2 id="en-trouble">Troubleshooting</h2>
+<ul><li><b>A video won’t open</b>: VP9 and AV1 videos may not open on some Macs. Try converting to MP4 (H.264 or HEVC).</li><li><b>Can’t overwrite</b>: MKV files can’t be overwritten, so save as a new file. Also check that the disk has enough free space.</li><li><b>A key does nothing</b>: make sure the editor window is in front. The single keys may have been changed in <b>Settings &gt; Shortcuts</b>.</li><li><b>Your videos never leave your Mac</b>: everything is processed locally, and no internet connection is needed.</li></ul>
+<h2 id="en-contact">Contact</h2>
+<p>For questions or bug reports, email <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#en">Privacy Policy</a> · <a href="./">Home</a></p>
+</section>
+
+<section id="de" lang="de">
+<h1>QuickCut-Hilfe</h1>
+<p class="updated">Zuletzt aktualisiert: 3. Oktober 2026</p>
+<p class="toc"><b>Inhalt</b>: <a href="#de-start">Video öffnen</a> · <a href="#de-edit">Schneiden</a> · <a href="#de-save">Sichern</a> · <a href="#de-selection">Nur einen Teil exportieren</a> · <a href="#de-shortcuts">Tastaturkurzbefehle</a> · <a href="#de-settings">Einstellungen</a> · <a href="#de-purchase">Kostenlose Exporte und Kauf</a> · <a href="#de-trouble">Fehlerbehebung</a></p>
+<h2 id="de-start">Video öffnen</h2>
+<ul><li><b>Ziehen Sie eine Datei auf das Fenster</b> oder wählen Sie <b>Ablage &gt; Öffnen …</b> (<kbd>⌘O</kbd>). Auch ein Klick in ein leeres Fenster öffnet die Auswahl.</li><li>Im Finder: Video mit Control-Klick anklicken und <b>Öffnen mit &gt; QuickCut</b> wählen.</li><li>Jedes Video öffnet sich in einem eigenen Fenster. Wenn alle Fenster geschlossen sind, wählen Sie <b>Ablage &gt; Neues Fenster</b> (<kbd>⌘N</kbd>) oder klicken Sie auf das Dock-Symbol.</li><li>Formate: <b>MP4 und MOV</b> (überschreiben oder als neue Datei sichern) sowie <b>MKV</b> (wird geöffnet und als MP4 gesichert).</li></ul>
+<h2 id="de-edit">Schneiden</h2>
+<ul><li><kbd>Leertaste</kbd> startet und stoppt die Wiedergabe. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> spulen zurück, stoppen und spulen vor – mit jedem Druck schneller.</li><li>Drücken Sie <kbd>E</kbd> (<b>Clip teilen</b>) am Anfang und Ende des unerwünschten Teils, wählen Sie den Clip dazwischen aus und drücken Sie <kbd>R</kbd> (<b>Ripple-Löschen</b>). Die Lücke schließt sich automatisch.</li><li><kbd>←</kbd> <kbd>→</kbd> bewegen um ein Bild, mit <kbd>⇧</kbd> um 5 Bilder (in den Einstellungen änderbar).</li><li>Die Zeitleiste zoomen Sie per Pinch-Geste, mit <kbd>+</kbd> <kbd>−</kbd> oder durch Scrollen. Wellenform und Miniaturen zeigen Stille und leere Stellen.</li><li>Vertan? <kbd>⌘Z</kbd> widerruft, <kbd>⇧⌘Z</kbd> wiederholt.</li></ul>
+<h2 id="de-save">Sichern</h2>
+<ul><li>Mit <kbd>⌘S</kbd> (<b>Sichern …</b>) wählen Sie <b>Originaldatei ersetzen</b> oder <b>Als neue Datei sichern</b>. <kbd>⇧⌘S</kbd> sichert immer als neue Datei.</li><li>Es wird nichts neu codiert, Bild und Ton bleiben unverändert. Nur die Bilder rund um jeden Schnitt werden verarbeitet, daher ist der Export fast sofort fertig.</li><li>Was <kbd>⌘S</kbd> tut (jedes Mal fragen, immer ersetzen, immer neue Datei), legen Sie unter <b>Einstellungen &gt; Sichern</b> fest.</li><li>MKV-Dateien können nicht überschrieben werden und werden als neue MP4-Datei gesichert.</li></ul>
+<h2 id="de-selection">Nur einen Teil exportieren</h2>
+<ul><li><kbd>⇧</kbd>-Klick wählt einen Bereich von Clips aus, <kbd>⌘</kbd>-Klick fügt Clips zur Auswahl hinzu.</li><li><b>Ablage &gt; Auswahl exportieren …</b> (<kbd>⇧⌘E</kbd>) exportiert nur die ausgewählten Clips. Ihre Bearbeitung des ganzen Videos bleibt erhalten.</li><li>Bei einer Auswahl mit Lücken wählen Sie <b>In einer Datei zusammenführen</b> oder <b>Als einzelne Dateien sichern</b>.</li></ul>
+<h2 id="de-shortcuts">Tastaturkurzbefehle</h2>
+<table><thead><tr><th>Taste</th><th>Aktion</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Wiedergabe / Pause</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Zurückspulen / Stopp / Vorspulen</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Clip teilen</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Ripple-Löschen</td></tr><tr><td><kbd>← / →</kbd></td><td>Ein Bild bewegen</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>5 Bilder bewegen</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Vorheriger / nächster Schnittpunkt</td></tr><tr><td><kbd>Home / End</kbd></td><td>Zum Anfang / Ende</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoomen</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Bereich auswählen / hinzufügen</td></tr><tr><td><kbd>Esc</kbd></td><td>Auswahl aufheben</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Widerrufen / Wiederholen</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Sichern … / Sichern unter …</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Auswahl exportieren …</td></tr><tr><td><kbd>⌘N</kbd></td><td>Neues Fenster</td></tr><tr><td><kbd>⌘O</kbd></td><td>Öffnen …</td></tr><tr><td><kbd>⌘/</kbd></td><td>Kurzbefehlsliste ein-/ausblenden</td></tr><tr><td><kbd>⌘,</kbd></td><td>Einstellungen …</td></tr></tbody></table>
+<h2 id="de-settings">Einstellungen</h2>
+<ul><li>Öffnen Sie <b>QuickCut &gt; Einstellungen …</b> (<kbd>⌘,</kbd>).</li><li><b>Allgemein</b>: Anzeigesprache, Schrittweite der Pfeiltasten und mehr.</li><li><b>Sichern</b>: Verhalten von <kbd>⌘S</kbd>, Name neuer Dateien und Export von Auswahlen.</li><li><b>Kurzbefehle</b>: Einzeltasten für Wiedergabe, Teilen, Löschen usw. frei belegen.</li><li><kbd>⌘/</kbd> blendet die Kurzbefehlsliste rechts im Editor ein oder aus.</li></ul>
+<h2 id="de-purchase">Kostenlose Exporte und Kauf</h2>
+<ul><li>Die ersten <b>20 Exporte</b> sind kostenlos, mit allen Funktionen.</li><li>Danach schaltet der einmalige In-App-Kauf <b>QuickCut Unlimited</b> unbegrenzte Exporte frei. Kein Abo.</li><li>Auf einem neuen Mac oder nach einer Neuinstallation öffnen Sie <b>Einstellungen &gt; QuickCut Unlimited</b> und klicken auf <b>Käufe wiederherstellen</b>. Melden Sie sich dazu im App Store mit dem Apple Account an, mit dem Sie gekauft haben.</li></ul>
+<h2 id="de-trouble">Fehlerbehebung</h2>
+<ul><li><b>Ein Video lässt sich nicht öffnen</b>: VP9- und AV1-Videos öffnen sich auf manchen Macs nicht. Konvertieren Sie es in MP4 (H.264 oder HEVC).</li><li><b>Überschreiben nicht möglich</b>: MKV-Dateien können nicht überschrieben werden, sichern Sie als neue Datei. Prüfen Sie auch den freien Speicherplatz.</li><li><b>Eine Taste reagiert nicht</b>: Das Editorfenster muss im Vordergrund sein. Möglicherweise wurde die Taste unter <b>Einstellungen &gt; Kurzbefehle</b> geändert.</li><li><b>Ihre Videos verlassen Ihren Mac nie</b>: Alles wird lokal verarbeitet, eine Internetverbindung ist nicht nötig.</li></ul>
+<h2 id="de-contact">Kontakt</h2>
+<p>Fragen und Fehlerberichte bitte an <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#de">Datenschutzerklärung</a> · <a href="./">Startseite</a></p>
+</section>
+
+<section id="es" lang="es">
+<h1>Ayuda de QuickCut</h1>
+<p class="updated">Última actualización: 3 de octubre de 2026</p>
+<p class="toc"><b>Contenido</b>: <a href="#es-start">Abrir un vídeo</a> · <a href="#es-edit">Cortar</a> · <a href="#es-save">Guardar</a> · <a href="#es-selection">Exportar solo una parte</a> · <a href="#es-shortcuts">Atajos de teclado</a> · <a href="#es-settings">Ajustes</a> · <a href="#es-purchase">Exportaciones gratuitas y compra</a> · <a href="#es-trouble">Solución de problemas</a></p>
+<h2 id="es-start">Abrir un vídeo</h2>
+<ul><li><b>Arrastra un archivo a la ventana</b> o elige <b>Archivo &gt; Abrir…</b> (<kbd>⌘O</kbd>). También puedes hacer clic en una ventana vacía.</li><li>En el Finder, haz clic con la tecla Control en un vídeo y elige <b>Abrir con &gt; QuickCut</b>.</li><li>Cada vídeo se abre en su propia ventana. Si cierras todas, elige <b>Archivo &gt; Nueva ventana</b> (<kbd>⌘N</kbd>) o haz clic en el icono del Dock.</li><li>Formatos: <b>MP4 y MOV</b> (sobrescribir o guardar como nuevo) y <b>MKV</b> (se abre y se guarda como MP4).</li></ul>
+<h2 id="es-edit">Cortar</h2>
+<ul><li><kbd>Espacio</kbd> reproduce y pausa. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> retroceden, detienen y avanzan, más rápido con cada pulsación.</li><li>Pulsa <kbd>E</kbd> (<b>Dividir clip</b>) al principio y al final de la parte que sobra, selecciona el clip intermedio y pulsa <kbd>R</kbd> (<b>Eliminar rizo</b>). El resto se junta solo.</li><li><kbd>←</kbd> <kbd>→</kbd> avanzan un fotograma; con <kbd>⇧</kbd>, 5 fotogramas (se puede cambiar en Ajustes).</li><li>Haz zoom en la línea de tiempo con un pellizco, <kbd>+</kbd> <kbd>−</kbd> o desplazándote. La forma de onda y las miniaturas ayudan a encontrar silencios y tiempos muertos.</li><li>¿Te equivocaste? <kbd>⌘Z</kbd> deshace y <kbd>⇧⌘Z</kbd> rehace.</li></ul>
+<h2 id="es-save">Guardar</h2>
+<ul><li><kbd>⌘S</kbd> (<b>Guardar…</b>) te deja elegir <b>Reemplazar el archivo original</b> o <b>Guardar como archivo nuevo</b>. <kbd>⇧⌘S</kbd> siempre guarda un archivo nuevo.</li><li>No se recodifica nada: la imagen y el sonido quedan intactos. Solo se procesan los fotogramas junto a cada corte, así que la exportación termina casi al instante.</li><li>Cambia lo que hace <kbd>⌘S</kbd> (preguntar siempre, reemplazar siempre, guardar nuevo siempre) en <b>Ajustes &gt; Guardado</b>.</li><li>Los archivos MKV no se pueden sobrescribir; se guardan como un archivo MP4 nuevo.</li></ul>
+<h2 id="es-selection">Exportar solo una parte</h2>
+<ul><li>Haz clic con <kbd>⇧</kbd> en los clips para seleccionar un rango y con <kbd>⌘</kbd> para añadirlos a la selección.</li><li><b>Archivo &gt; Exportar selección…</b> (<kbd>⇧⌘E</kbd>) exporta solo los clips seleccionados. La edición del vídeo completo se mantiene.</li><li>Si la selección tiene huecos, elige <b>Combinar en un solo archivo</b> o <b>Guardar como archivos separados</b>.</li></ul>
+<h2 id="es-shortcuts">Atajos de teclado</h2>
+<table><thead><tr><th>Tecla</th><th>Acción</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Reproducir / Pausar</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Retroceder / Detener / Avanzar</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Dividir clip</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Eliminar rizo</td></tr><tr><td><kbd>← / →</kbd></td><td>Mover un fotograma</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>Mover 5 fotogramas</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Punto de edición anterior / siguiente</td></tr><tr><td><kbd>Home / End</kbd></td><td>Ir al inicio / final</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoom</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Seleccionar rango / añadir</td></tr><tr><td><kbd>Esc</kbd></td><td>Anular selección</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Deshacer / Rehacer</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Guardar… / Guardar como…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Exportar selección…</td></tr><tr><td><kbd>⌘N</kbd></td><td>Nueva ventana</td></tr><tr><td><kbd>⌘O</kbd></td><td>Abrir…</td></tr><tr><td><kbd>⌘/</kbd></td><td>Mostrar / ocultar la lista de atajos</td></tr><tr><td><kbd>⌘,</kbd></td><td>Ajustes…</td></tr></tbody></table>
+<h2 id="es-settings">Ajustes</h2>
+<ul><li>Abre <b>QuickCut &gt; Ajustes…</b> (<kbd>⌘,</kbd>).</li><li><b>General</b>: idioma, cuántos fotogramas avanzan las flechas y más.</li><li><b>Guardado</b>: qué hace <kbd>⌘S</kbd>, el nombre de los archivos nuevos y cómo se exportan las selecciones.</li><li><b>Atajos</b>: reasigna las teclas de reproducir, dividir, eliminar y más.</li><li><kbd>⌘/</kbd> muestra u oculta la lista de atajos a la derecha del editor.</li></ul>
+<h2 id="es-purchase">Exportaciones gratuitas y compra</h2>
+<ul><li>Las primeras <b>20 exportaciones</b> son gratis, con todas las funciones.</li><li>Después, la compra única dentro de la app <b>QuickCut Unlimited</b> desbloquea exportaciones ilimitadas. Sin suscripción.</li><li>En un Mac nuevo o tras reinstalar, abre <b>Ajustes &gt; QuickCut Unlimited</b> y haz clic en <b>Restaurar compras</b>. Inicia sesión en el App Store con la cuenta de Apple con la que compraste.</li></ul>
+<h2 id="es-trouble">Solución de problemas</h2>
+<ul><li><b>Un vídeo no se abre</b>: los vídeos VP9 y AV1 pueden no abrirse en algunos Mac. Prueba a convertirlo a MP4 (H.264 o HEVC).</li><li><b>No se puede sobrescribir</b>: los MKV no se pueden sobrescribir; guarda como archivo nuevo. Comprueba también el espacio libre en disco.</li><li><b>Una tecla no hace nada</b>: asegúrate de que la ventana del editor está al frente. Puede que la tecla se haya cambiado en <b>Ajustes &gt; Atajos</b>.</li><li><b>Tus vídeos nunca salen de tu Mac</b>: todo se procesa en local y no hace falta conexión a internet.</li></ul>
+<h2 id="es-contact">Contacto</h2>
+<p>Para preguntas o informes de errores, escribe a <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#es">Política de privacidad</a> · <a href="./">Inicio</a></p>
+</section>
+
+<section id="fr" lang="fr">
+<h1>Aide de QuickCut</h1>
+<p class="updated">Dernière mise à jour : 3 octobre 2026</p>
+<p class="toc"><b>Sommaire</b>: <a href="#fr-start">Ouvrir une vidéo</a> · <a href="#fr-edit">Couper</a> · <a href="#fr-save">Enregistrer</a> · <a href="#fr-selection">Exporter une partie seulement</a> · <a href="#fr-shortcuts">Raccourcis clavier</a> · <a href="#fr-settings">Réglages</a> · <a href="#fr-purchase">Exports gratuits et achat</a> · <a href="#fr-trouble">Dépannage</a></p>
+<h2 id="fr-start">Ouvrir une vidéo</h2>
+<ul><li><b>Faites glisser un fichier sur la fenêtre</b> ou choisissez <b>Fichier &gt; Ouvrir…</b> (<kbd>⌘O</kbd>). Un clic dans une fenêtre vide fonctionne aussi.</li><li>Dans le Finder, faites un Contrôle-clic sur une vidéo et choisissez <b>Ouvrir avec &gt; QuickCut</b>.</li><li>Chaque vidéo s’ouvre dans sa propre fenêtre. Si vous les avez toutes fermées, choisissez <b>Fichier &gt; Nouvelle fenêtre</b> (<kbd>⌘N</kbd>) ou cliquez sur l’icône du Dock.</li><li>Formats : <b>MP4 et MOV</b> (remplacer ou enregistrer comme nouveau) et <b>MKV</b> (s’ouvre, s’enregistre en MP4).</li></ul>
+<h2 id="fr-edit">Couper</h2>
+<ul><li><kbd>Espace</kbd> lance et met en pause la lecture. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> reculent, arrêtent et avancent, plus vite à chaque pression.</li><li>Appuyez sur <kbd>E</kbd> (<b>Scinder le clip</b>) au début et à la fin du passage inutile, sélectionnez le clip entre les deux et appuyez sur <kbd>R</kbd> (<b>Supprimer et raccorder</b>). La suite se raccorde automatiquement.</li><li><kbd>←</kbd> <kbd>→</kbd> avancent d’une image ; avec <kbd>⇧</kbd>, de 5 images (modifiable dans les réglages).</li><li>Zoomez sur la timeline par pincement, avec <kbd>+</kbd> <kbd>−</kbd> ou en faisant défiler. La forme d’onde et les vignettes aident à repérer les silences et les temps morts.</li><li>Une erreur ? <kbd>⌘Z</kbd> annule et <kbd>⇧⌘Z</kbd> rétablit.</li></ul>
+<h2 id="fr-save">Enregistrer</h2>
+<ul><li><kbd>⌘S</kbd> (<b>Enregistrer…</b>) vous propose <b>Remplacer le fichier d’origine</b> ou <b>Enregistrer comme nouveau fichier</b>. <kbd>⇧⌘S</kbd> enregistre toujours un nouveau fichier.</li><li>Rien n’est réencodé : l’image et le son restent identiques. Seules les images autour de chaque coupe sont traitées, l’export est donc presque instantané.</li><li>Choisissez le comportement de <kbd>⌘S</kbd> (toujours demander, toujours remplacer, toujours enregistrer un nouveau fichier) dans <b>Réglages &gt; Enregistrement</b>.</li><li>Les fichiers MKV ne peuvent pas être remplacés ; ils sont enregistrés dans un nouveau fichier MP4.</li></ul>
+<h2 id="fr-selection">Exporter une partie seulement</h2>
+<ul><li><kbd>⇧</kbd>-clic sur les clips pour sélectionner une plage, <kbd>⌘</kbd>-clic pour en ajouter.</li><li><b>Fichier &gt; Exporter la sélection…</b> (<kbd>⇧⌘E</kbd>) exporte uniquement les clips sélectionnés. Vos modifications de la vidéo complète sont conservées.</li><li>Si la sélection comporte des trous, choisissez <b>Fusionner en un seul fichier</b> ou <b>Enregistrer dans des fichiers distincts</b>.</li></ul>
+<h2 id="fr-shortcuts">Raccourcis clavier</h2>
+<table><thead><tr><th>Touche</th><th>Action</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Lecture / Pause</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Reculer / Arrêter / Avancer</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Scinder le clip</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Supprimer et raccorder</td></tr><tr><td><kbd>← / →</kbd></td><td>Avancer d’une image</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>Avancer de 5 images</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Point de montage précédent / suivant</td></tr><tr><td><kbd>Home / End</kbd></td><td>Aller au début / à la fin</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoom</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Sélectionner une plage / ajouter</td></tr><tr><td><kbd>Esc</kbd></td><td>Désélectionner</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Annuler / Rétablir</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Enregistrer… / Enregistrer sous…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Exporter la sélection…</td></tr><tr><td><kbd>⌘N</kbd></td><td>Nouvelle fenêtre</td></tr><tr><td><kbd>⌘O</kbd></td><td>Ouvrir…</td></tr><tr><td><kbd>⌘/</kbd></td><td>Afficher / masquer la liste des raccourcis</td></tr><tr><td><kbd>⌘,</kbd></td><td>Réglages…</td></tr></tbody></table>
+<h2 id="fr-settings">Réglages</h2>
+<ul><li>Ouvrez <b>QuickCut &gt; Réglages…</b> (<kbd>⌘,</kbd>).</li><li><b>Général</b> : langue d’affichage, nombre d’images par pression des flèches, etc.</li><li><b>Enregistrement</b> : comportement de <kbd>⌘S</kbd>, nom des nouveaux fichiers et export des sélections.</li><li><b>Raccourcis</b> : réattribuez les touches de lecture, de scission, de suppression, etc.</li><li><kbd>⌘/</kbd> affiche ou masque la liste des raccourcis à droite de l’éditeur.</li></ul>
+<h2 id="fr-purchase">Exports gratuits et achat</h2>
+<ul><li>Vos <b>20 premiers exports</b> sont gratuits, avec toutes les fonctions.</li><li>Ensuite, l’achat intégré unique <b>QuickCut Unlimited</b> débloque des exports illimités. Sans abonnement.</li><li>Sur un nouveau Mac ou après une réinstallation, ouvrez <b>Réglages &gt; QuickCut Unlimited</b> et cliquez sur <b>Restaurer les achats</b>. Connectez-vous à l’App Store avec le compte Apple utilisé pour l’achat.</li></ul>
+<h2 id="fr-trouble">Dépannage</h2>
+<ul><li><b>Une vidéo ne s’ouvre pas</b> : les vidéos VP9 et AV1 peuvent ne pas s’ouvrir sur certains Mac. Essayez de la convertir en MP4 (H.264 ou HEVC).</li><li><b>Impossible de remplacer</b> : les fichiers MKV ne peuvent pas être remplacés, enregistrez un nouveau fichier. Vérifiez aussi l’espace disque disponible.</li><li><b>Une touche ne fait rien</b> : vérifiez que la fenêtre de l’éditeur est au premier plan. La touche a peut-être été modifiée dans <b>Réglages &gt; Raccourcis</b>.</li><li><b>Vos vidéos ne quittent jamais votre Mac</b> : tout est traité localement, sans connexion à Internet.</li></ul>
+<h2 id="fr-contact">Contact</h2>
+<p>Pour toute question ou signalement de bug : <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#fr">Politique de confidentialité</a> · <a href="./">Accueil</a></p>
+</section>
+
+<section id="it" lang="it">
+<h1>Aiuto di QuickCut</h1>
+<p class="updated">Ultimo aggiornamento: 3 ottobre 2026</p>
+<p class="toc"><b>Indice</b>: <a href="#it-start">Aprire un video</a> · <a href="#it-edit">Tagliare</a> · <a href="#it-save">Salvare</a> · <a href="#it-selection">Esportare solo una parte</a> · <a href="#it-shortcuts">Abbreviazioni da tastiera</a> · <a href="#it-settings">Impostazioni</a> · <a href="#it-purchase">Esportazioni gratuite e acquisto</a> · <a href="#it-trouble">Risoluzione dei problemi</a></p>
+<h2 id="it-start">Aprire un video</h2>
+<ul><li><b>Trascina un file sulla finestra</b> oppure scegli <b>File &gt; Apri…</b> (<kbd>⌘O</kbd>). Puoi anche fare clic su una finestra vuota.</li><li>Nel Finder, fai Ctrl-clic su un video e scegli <b>Apri con &gt; QuickCut</b>.</li><li>Ogni video si apre in una finestra separata. Se le hai chiuse tutte, scegli <b>File &gt; Nuova finestra</b> (<kbd>⌘N</kbd>) o fai clic sull’icona nel Dock.</li><li>Formati: <b>MP4 e MOV</b> (sovrascrivi o salva come nuovo) e <b>MKV</b> (si apre, si salva in MP4).</li></ul>
+<h2 id="it-edit">Tagliare</h2>
+<ul><li><kbd>Spazio</kbd> avvia e mette in pausa. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> riavvolgono, fermano e mandano avanti, più veloci a ogni pressione.</li><li>Premi <kbd>E</kbd> (<b>Dividi clip</b>) all’inizio e alla fine della parte da togliere, seleziona il clip in mezzo e premi <kbd>R</kbd> (<b>Elimina ripple</b>). Il resto si ricongiunge da solo.</li><li><kbd>←</kbd> <kbd>→</kbd> spostano di un fotogramma; con <kbd>⇧</kbd>, di 5 fotogrammi (modificabile nelle impostazioni).</li><li>Ingrandisci la timeline con il pinch, con <kbd>+</kbd> <kbd>−</kbd> o scorrendo. Forma d’onda e miniature aiutano a trovare silenzi e tempi morti.</li><li>Errore? <kbd>⌘Z</kbd> annulla e <kbd>⇧⌘Z</kbd> ripristina.</li></ul>
+<h2 id="it-save">Salvare</h2>
+<ul><li><kbd>⌘S</kbd> (<b>Salva…</b>) ti fa scegliere tra <b>Sostituisci il file originale</b> e <b>Salva come nuovo file</b>. <kbd>⇧⌘S</kbd> salva sempre un nuovo file.</li><li>Niente viene ricodificato: immagine e audio restano identici. Vengono elaborati solo i fotogrammi vicino a ogni taglio, quindi l’esportazione è quasi istantanea.</li><li>Scegli cosa fa <kbd>⌘S</kbd> (chiedi ogni volta, sostituisci sempre, salva sempre nuovo) in <b>Impostazioni &gt; Salvataggio</b>.</li><li>I file MKV non si possono sovrascrivere; vengono salvati come nuovo file MP4.</li></ul>
+<h2 id="it-selection">Esportare solo una parte</h2>
+<ul><li><kbd>⇧</kbd>-clic sui clip per selezionare un intervallo, <kbd>⌘</kbd>-clic per aggiungerli alla selezione.</li><li><b>File &gt; Esporta selezione…</b> (<kbd>⇧⌘E</kbd>) esporta solo i clip selezionati. Le modifiche al video completo restano invariate.</li><li>Se la selezione ha dei vuoti, scegli <b>Unisci in un unico file</b> o <b>Salva come file separati</b>.</li></ul>
+<h2 id="it-shortcuts">Abbreviazioni da tastiera</h2>
+<table><thead><tr><th>Tasto</th><th>Azione</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Riproduci / Pausa</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Riavvolgi / Ferma / Avanti veloce</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Dividi clip</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Elimina ripple</td></tr><tr><td><kbd>← / →</kbd></td><td>Sposta di un fotogramma</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>Sposta di 5 fotogrammi</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Punto di modifica precedente / successivo</td></tr><tr><td><kbd>Home / End</kbd></td><td>Vai all’inizio / alla fine</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoom</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Seleziona intervallo / aggiungi</td></tr><tr><td><kbd>Esc</kbd></td><td>Deseleziona</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Annulla / Ripristina</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Salva… / Salva come…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Esporta selezione…</td></tr><tr><td><kbd>⌘N</kbd></td><td>Nuova finestra</td></tr><tr><td><kbd>⌘O</kbd></td><td>Apri…</td></tr><tr><td><kbd>⌘/</kbd></td><td>Mostra / nascondi l’elenco delle abbreviazioni</td></tr><tr><td><kbd>⌘,</kbd></td><td>Impostazioni…</td></tr></tbody></table>
+<h2 id="it-settings">Impostazioni</h2>
+<ul><li>Apri <b>QuickCut &gt; Impostazioni…</b> (<kbd>⌘,</kbd>).</li><li><b>Generali</b>: lingua, di quanti fotogrammi si spostano le frecce e altro.</li><li><b>Salvataggio</b>: cosa fa <kbd>⌘S</kbd>, il nome dei nuovi file e come esportare le selezioni.</li><li><b>Abbreviazioni</b>: riassegna i tasti di riproduzione, divisione, eliminazione e altro.</li><li><kbd>⌘/</kbd> mostra o nasconde l’elenco delle abbreviazioni a destra dell’editor.</li></ul>
+<h2 id="it-purchase">Esportazioni gratuite e acquisto</h2>
+<ul><li>Le prime <b>20 esportazioni</b> sono gratuite, con tutte le funzioni.</li><li>Dopo, l’acquisto in-app una tantum <b>QuickCut Unlimited</b> sblocca esportazioni illimitate. Nessun abbonamento.</li><li>Su un nuovo Mac o dopo una reinstallazione, apri <b>Impostazioni &gt; QuickCut Unlimited</b> e fai clic su <b>Ripristina acquisti</b>. Accedi all’App Store con l’Apple Account usato per l’acquisto.</li></ul>
+<h2 id="it-trouble">Risoluzione dei problemi</h2>
+<ul><li><b>Un video non si apre</b>: i video VP9 e AV1 potrebbero non aprirsi su alcuni Mac. Prova a convertirlo in MP4 (H.264 o HEVC).</li><li><b>Impossibile sovrascrivere</b>: i file MKV non si possono sovrascrivere, salva come nuovo file. Controlla anche lo spazio libero su disco.</li><li><b>Un tasto non funziona</b>: assicurati che la finestra dell’editor sia in primo piano. Il tasto potrebbe essere stato cambiato in <b>Impostazioni &gt; Abbreviazioni</b>.</li><li><b>I tuoi video non lasciano mai il Mac</b>: tutto viene elaborato in locale, senza bisogno di connessione a Internet.</li></ul>
+<h2 id="it-contact">Contatti</h2>
+<p>Per domande o segnalazioni di bug scrivi a <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#it">Informativa sulla privacy</a> · <a href="./">Home</a></p>
+</section>
+
+<section id="ko" lang="ko">
+<h1>QuickCut 도움말</h1>
+<p class="updated">최종 업데이트: 2026년 10월 3일</p>
+<p class="toc"><b>목차</b>: <a href="#ko-start">동영상 열기</a> · <a href="#ko-edit">자르기</a> · <a href="#ko-save">저장하기</a> · <a href="#ko-selection">일부만 내보내기</a> · <a href="#ko-shortcuts">키보드 단축키</a> · <a href="#ko-settings">설정</a> · <a href="#ko-purchase">무료 횟수와 구입</a> · <a href="#ko-trouble">문제 해결</a></p>
+<h2 id="ko-start">동영상 열기</h2>
+<ul><li><b>파일을 윈도우로 드래그 앤 드롭</b>하거나 <b>파일 &gt; 열기…</b>(<kbd>⌘O</kbd>)를 선택합니다. 빈 윈도우를 클릭해도 열 수 있습니다.</li><li>Finder에서 동영상을 Control-클릭한 다음 <b>다음으로 열기 &gt; QuickCut</b>을 선택해도 됩니다.</li><li>동영상 하나당 윈도우 하나로 열립니다. 윈도우를 모두 닫았다면 <b>파일 &gt; 새로운 윈도우</b>(<kbd>⌘N</kbd>)를 선택하거나 Dock 아이콘을 클릭하세요.</li><li>지원 형식: <b>MP4 / MOV</b>(덮어쓰기·새 파일로 저장 모두 가능), <b>MKV</b>(열 수 있으며 MP4로 저장).</li></ul>
+<h2 id="ko-edit">자르기</h2>
+<ul><li><kbd>Space</kbd>로 재생 / 일시 정지, <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd>로 되감기·정지·빨리 감기를 합니다. 누를 때마다 빨라집니다.</li><li>필요 없는 부분의 시작과 끝에서 <kbd>E</kbd>(<b>클립 분할</b>)를 누르고, 사이의 클립을 선택한 뒤 <kbd>R</kbd>(<b>리플 삭제</b>)을 누릅니다. 뒷부분이 자동으로 당겨집니다.</li><li><kbd>←</kbd> <kbd>→</kbd>로 1프레임, <kbd>⇧</kbd>를 함께 누르면 5프레임씩 이동합니다(설정에서 변경 가능).</li><li>타임라인은 핀치, <kbd>+</kbd> <kbd>−</kbd>, 스크롤로 확대·축소합니다. 파형과 썸네일로 무음 구간이나 불필요한 장면을 찾을 수 있습니다.</li><li>실수했다면 <kbd>⌘Z</kbd>로 실행 취소, <kbd>⇧⌘Z</kbd>로 실행 복귀합니다.</li></ul>
+<h2 id="ko-save">저장하기</h2>
+<ul><li><kbd>⌘S</kbd>(<b>저장…</b>)를 누르면 <b>원본 파일 대치</b> 또는 <b>새로운 파일로 저장</b>을 선택할 수 있습니다. <kbd>⇧⌘S</kbd>는 항상 새 파일로 저장합니다.</li><li>재인코딩하지 않으므로 화질과 음질이 그대로 유지됩니다. 자른 위치 주변만 처리하므로 내보내기가 거의 바로 끝납니다.</li><li><kbd>⌘S</kbd>의 기본 동작(매번 묻기 / 항상 대치 / 항상 새 파일)은 <b>설정 &gt; 저장</b>에서 바꿀 수 있습니다.</li><li>MKV는 덮어쓸 수 없으며 새 MP4 파일로 저장됩니다.</li></ul>
+<h2 id="ko-selection">일부만 내보내기</h2>
+<ul><li>클립을 <kbd>⇧</kbd>-클릭하면 범위 선택, <kbd>⌘</kbd>-클릭하면 선택에 추가됩니다.</li><li><b>파일 &gt; 선택 영역 내보내기…</b>(<kbd>⇧⌘E</kbd>)로 선택한 클립만 내보냅니다. 전체 동영상의 편집 내용은 그대로 남습니다.</li><li>떨어진 구간을 선택했다면 <b>하나의 파일로 합치기</b> 또는 <b>구간별로 나눠 저장</b>을 고를 수 있습니다.</li></ul>
+<h2 id="ko-shortcuts">키보드 단축키</h2>
+<table><thead><tr><th>키</th><th>동작</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>재생 / 일시 정지</td></tr><tr><td><kbd>J / K / L</kbd></td><td>되감기 / 정지 / 빨리 감기</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>클립 분할</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>리플 삭제</td></tr><tr><td><kbd>← / →</kbd></td><td>1프레임 이동</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>5프레임 이동</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>이전 / 다음 편집점</td></tr><tr><td><kbd>Home / End</kbd></td><td>처음 / 끝으로</td></tr><tr><td><kbd>+ / −</kbd></td><td>확대 / 축소</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>범위 선택 / 선택 추가</td></tr><tr><td><kbd>Esc</kbd></td><td>선택 해제</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>실행 취소 / 실행 복귀</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>저장… / 다른 이름으로 저장…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>선택 영역 내보내기…</td></tr><tr><td><kbd>⌘N</kbd></td><td>새로운 윈도우</td></tr><tr><td><kbd>⌘O</kbd></td><td>열기…</td></tr><tr><td><kbd>⌘/</kbd></td><td>단축키 목록 보이기 / 숨기기</td></tr><tr><td><kbd>⌘,</kbd></td><td>설정…</td></tr></tbody></table>
+<h2 id="ko-settings">설정</h2>
+<ul><li><b>QuickCut &gt; 설정…</b>(<kbd>⌘,</kbd>)으로 엽니다.</li><li><b>일반</b>: 표시 언어, 화살표 키로 이동할 프레임 수 등.</li><li><b>저장</b>: <kbd>⌘S</kbd>의 기본 동작, 새 파일 이름, 선택 영역 내보내기 방식.</li><li><b>단축키</b>: 재생·분할·삭제 등의 단일 키를 원하는 키로 바꿀 수 있습니다.</li><li>편집 화면 오른쪽의 단축키 목록은 <kbd>⌘/</kbd>로 보이거나 숨깁니다.</li></ul>
+<h2 id="ko-purchase">무료 횟수와 구입</h2>
+<ul><li>처음 <b>20회 내보내기</b>까지는 모든 기능을 무료로 사용할 수 있습니다.</li><li>이후에는 1회 구입하는 앱 내 구입 <b>QuickCut Unlimited</b>로 무제한 내보낼 수 있습니다. 구독이 아닙니다.</li><li>새 Mac이나 재설치 후에는 <b>설정 &gt; QuickCut Unlimited</b>에서 <b>구입 항목 복원</b>을 클릭하세요. 구입할 때 사용한 Apple 계정으로 App Store에 로그인되어 있어야 합니다.</li></ul>
+<h2 id="ko-trouble">문제 해결</h2>
+<ul><li><b>열리지 않을 때</b>: VP9 / AV1 동영상은 일부 Mac에서 열리지 않을 수 있습니다. MP4(H.264 / HEVC)로 변환해 보세요.</li><li><b>덮어쓸 수 없을 때</b>: MKV는 덮어쓸 수 없으니 새 파일로 저장하세요. 저장 위치의 여유 공간도 확인하세요.</li><li><b>키가 작동하지 않을 때</b>: 편집 윈도우가 앞에 있는지 확인하세요. <b>설정 &gt; 단축키</b>에서 키가 바뀌었을 수 있습니다.</li><li><b>동영상은 어디로도 전송되지 않습니다</b>: 모든 처리는 Mac에서 이루어지며 인터넷 연결이 필요 없습니다.</li></ul>
+<h2 id="ko-contact">문의</h2>
+<p>질문이나 버그 신고는 <b>nbash0926i@gmail.com</b>로 보내 주세요.</p>
+<p class="links"><a href="privacy.html#ko">개인정보 처리방침</a> · <a href="./">홈</a></p>
+</section>
+
+<section id="pt-BR" lang="pt-BR">
+<h1>Ajuda do QuickCut</h1>
+<p class="updated">Última atualização: 3 de outubro de 2026</p>
+<p class="toc"><b>Conteúdo</b>: <a href="#pt-BR-start">Abrir um vídeo</a> · <a href="#pt-BR-edit">Cortar</a> · <a href="#pt-BR-save">Salvar</a> · <a href="#pt-BR-selection">Exportar só uma parte</a> · <a href="#pt-BR-shortcuts">Atalhos de teclado</a> · <a href="#pt-BR-settings">Ajustes</a> · <a href="#pt-BR-purchase">Exportações grátis e compra</a> · <a href="#pt-BR-trouble">Solução de problemas</a></p>
+<h2 id="pt-BR-start">Abrir um vídeo</h2>
+<ul><li><b>Arraste um arquivo para a janela</b> ou escolha <b>Arquivo &gt; Abrir…</b> (<kbd>⌘O</kbd>). Também dá para clicar em uma janela vazia.</li><li>No Finder, clique com a tecla Control pressionada em um vídeo e escolha <b>Abrir com &gt; QuickCut</b>.</li><li>Cada vídeo abre na própria janela. Se fechar todas, escolha <b>Arquivo &gt; Nova Janela</b> (<kbd>⌘N</kbd>) ou clique no ícone do Dock.</li><li>Formatos: <b>MP4 e MOV</b> (substituir ou salvar como novo) e <b>MKV</b> (abre e salva como MP4).</li></ul>
+<h2 id="pt-BR-edit">Cortar</h2>
+<ul><li><kbd>Espaço</kbd> reproduz e pausa. <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> voltam, param e avançam, mais rápido a cada toque.</li><li>Pressione <kbd>E</kbd> (<b>Dividir clipe</b>) no início e no fim do trecho que não quer, selecione o clipe do meio e pressione <kbd>R</kbd> (<b>Excluir ripple</b>). O restante se junta sozinho.</li><li><kbd>←</kbd> <kbd>→</kbd> movem um quadro; com <kbd>⇧</kbd>, 5 quadros (pode ser alterado nos Ajustes).</li><li>Aplique zoom na linha do tempo com pinça, <kbd>+</kbd> <kbd>−</kbd> ou rolando. A forma de onda e as miniaturas ajudam a achar silêncios e trechos parados.</li><li>Errou? <kbd>⌘Z</kbd> desfaz e <kbd>⇧⌘Z</kbd> refaz.</li></ul>
+<h2 id="pt-BR-save">Salvar</h2>
+<ul><li><kbd>⌘S</kbd> (<b>Salvar…</b>) permite escolher <b>Substituir o arquivo original</b> ou <b>Salvar como novo arquivo</b>. <kbd>⇧⌘S</kbd> sempre salva um arquivo novo.</li><li>Nada é recodificado: imagem e som ficam exatamente como eram. Só os quadros perto de cada corte são processados, por isso a exportação termina quase na hora.</li><li>Defina o que <kbd>⌘S</kbd> faz (perguntar sempre, substituir sempre, salvar novo sempre) em <b>Ajustes &gt; Salvamento</b>.</li><li>Arquivos MKV não podem ser substituídos; são salvos como um novo arquivo MP4.</li></ul>
+<h2 id="pt-BR-selection">Exportar só uma parte</h2>
+<ul><li>Clique com <kbd>⇧</kbd> nos clipes para selecionar um intervalo e com <kbd>⌘</kbd> para adicionar à seleção.</li><li><b>Arquivo &gt; Exportar seleção…</b> (<kbd>⇧⌘E</kbd>) exporta só os clipes selecionados. A edição do vídeo completo continua como está.</li><li>Se a seleção tiver lacunas, escolha <b>Mesclar em um único arquivo</b> ou <b>Salvar como arquivos separados</b>.</li></ul>
+<h2 id="pt-BR-shortcuts">Atalhos de teclado</h2>
+<table><thead><tr><th>Tecla</th><th>Ação</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>Reproduzir / Pausar</td></tr><tr><td><kbd>J / K / L</kbd></td><td>Voltar / Parar / Avançar</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>Dividir clipe</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>Excluir ripple</td></tr><tr><td><kbd>← / →</kbd></td><td>Mover um quadro</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>Mover 5 quadros</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>Ponto de edição anterior / seguinte</td></tr><tr><td><kbd>Home / End</kbd></td><td>Ir ao início / fim</td></tr><tr><td><kbd>+ / −</kbd></td><td>Zoom</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>Selecionar intervalo / adicionar</td></tr><tr><td><kbd>Esc</kbd></td><td>Desmarcar</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Desfazer / Refazer</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>Salvar… / Salvar como…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>Exportar seleção…</td></tr><tr><td><kbd>⌘N</kbd></td><td>Nova Janela</td></tr><tr><td><kbd>⌘O</kbd></td><td>Abrir…</td></tr><tr><td><kbd>⌘/</kbd></td><td>Mostrar / ocultar a lista de atalhos</td></tr><tr><td><kbd>⌘,</kbd></td><td>Ajustes…</td></tr></tbody></table>
+<h2 id="pt-BR-settings">Ajustes</h2>
+<ul><li>Abra <b>QuickCut &gt; Ajustes…</b> (<kbd>⌘,</kbd>).</li><li><b>Geral</b>: idioma, quantos quadros as setas avançam e mais.</li><li><b>Salvamento</b>: o que <kbd>⌘S</kbd> faz, o nome dos arquivos novos e como as seleções são exportadas.</li><li><b>Atalhos</b>: troque as teclas de reproduzir, dividir, excluir e outras.</li><li><kbd>⌘/</kbd> mostra ou oculta a lista de atalhos à direita do editor.</li></ul>
+<h2 id="pt-BR-purchase">Exportações grátis e compra</h2>
+<ul><li>As primeiras <b>20 exportações</b> são grátis, com todos os recursos.</li><li>Depois, a compra única dentro do app <b>QuickCut Unlimited</b> libera exportações ilimitadas. Sem assinatura.</li><li>Em um Mac novo ou após reinstalar, abra <b>Ajustes &gt; QuickCut Unlimited</b> e clique em <b>Restaurar compras</b>. Inicie sessão na App Store com a Conta Apple usada na compra.</li></ul>
+<h2 id="pt-BR-trouble">Solução de problemas</h2>
+<ul><li><b>Um vídeo não abre</b>: vídeos VP9 e AV1 podem não abrir em alguns Macs. Tente convertê-lo para MP4 (H.264 ou HEVC).</li><li><b>Não dá para substituir</b>: arquivos MKV não podem ser substituídos; salve como arquivo novo. Verifique também o espaço livre em disco.</li><li><b>Uma tecla não funciona</b>: confira se a janela do editor está na frente. A tecla pode ter sido alterada em <b>Ajustes &gt; Atalhos</b>.</li><li><b>Seus vídeos nunca saem do seu Mac</b>: tudo é processado localmente, sem precisar de internet.</li></ul>
+<h2 id="pt-BR-contact">Contato</h2>
+<p>Para dúvidas ou relatos de erros, escreva para <b>nbash0926i@gmail.com</b>.</p>
+<p class="links"><a href="privacy.html#pt-BR">Política de privacidade</a> · <a href="./">Início</a></p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans">
+<h1>QuickCut 帮助</h1>
+<p class="updated">最后更新：2026年10月3日</p>
+<p class="toc"><b>目录</b>: <a href="#zh-Hans-start">打开视频</a> · <a href="#zh-Hans-edit">剪切</a> · <a href="#zh-Hans-save">保存</a> · <a href="#zh-Hans-selection">只导出一部分</a> · <a href="#zh-Hans-shortcuts">键盘快捷键</a> · <a href="#zh-Hans-settings">设置</a> · <a href="#zh-Hans-purchase">免费次数与购买</a> · <a href="#zh-Hans-trouble">疑难解答</a></p>
+<h2 id="zh-Hans-start">打开视频</h2>
+<ul><li>将文件<b>拖放到窗口</b>，或选择<b>文件 &gt; 打开…</b>（<kbd>⌘O</kbd>）。点按空白窗口也可以打开。</li><li>也可以在访达中按住 Control 键点按视频，然后选择<b>打开方式 &gt; QuickCut</b>。</li><li>每个视频在各自的窗口中打开。关闭所有窗口后，可以选择<b>文件 &gt; 新建窗口</b>（<kbd>⌘N</kbd>）或点按程序坞中的图标重新打开。</li><li>支持格式：<b>MP4 / MOV</b>（可覆盖保存或另存为）、<b>MKV</b>（可打开，保存为 MP4）。</li></ul>
+<h2 id="zh-Hans-edit">剪切</h2>
+<ul><li><kbd>空格</kbd>播放 / 暂停，<kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> 快退、停止、快进，每按一次速度加快。</li><li>在不需要的片段开头和结尾按 <kbd>E</kbd>（<b>分割剪辑</b>），选中中间的剪辑后按 <kbd>R</kbd>（<b>波纹删除</b>），后面的部分会自动补上。</li><li><kbd>←</kbd> <kbd>→</kbd> 移动 1 帧，加按 <kbd>⇧</kbd> 移动 5 帧（可在设置中更改）。</li><li>时间线可用双指捏合、<kbd>+</kbd> <kbd>−</kbd> 或滚动来缩放。借助波形和缩略图，可以快速找到静音和多余的画面。</li><li>操作失误时，按 <kbd>⌘Z</kbd> 撤销，按 <kbd>⇧⌘Z</kbd> 重做。</li></ul>
+<h2 id="zh-Hans-save">保存</h2>
+<ul><li>按 <kbd>⌘S</kbd>（<b>保存…</b>）可选择<b>替换原始文件</b>或<b>存储为新文件</b>。<kbd>⇧⌘S</kbd> 始终另存为新文件。</li><li>不重新编码，画质和音质保持原样。只处理剪切点附近的帧，因此导出几乎瞬间完成。</li><li>可在<b>设置 &gt; 保存</b>中更改 <kbd>⌘S</kbd> 的默认行为（每次询问 / 始终替换 / 始终另存）。</li><li>MKV 文件无法覆盖保存，会另存为新的 MP4 文件。</li></ul>
+<h2 id="zh-Hans-selection">只导出一部分</h2>
+<ul><li>按住 <kbd>⇧</kbd> 点按剪辑可选择范围，按住 <kbd>⌘</kbd> 点按可添加到所选内容。</li><li>选择<b>文件 &gt; 导出所选区间…</b>（<kbd>⇧⌘E</kbd>）只导出所选剪辑。对整个视频的编辑会保留。</li><li>所选区间不连续时，可选择<b>合并为一个文件</b>或<b>分别保存为多个文件</b>。</li></ul>
+<h2 id="zh-Hans-shortcuts">键盘快捷键</h2>
+<table><thead><tr><th>按键</th><th>操作</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>播放 / 暂停</td></tr><tr><td><kbd>J / K / L</kbd></td><td>快退 / 停止 / 快进</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>分割剪辑</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>波纹删除</td></tr><tr><td><kbd>← / →</kbd></td><td>移动 1 帧</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>移动 5 帧</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>上一个 / 下一个编辑点</td></tr><tr><td><kbd>Home / End</kbd></td><td>跳到开头 / 结尾</td></tr><tr><td><kbd>+ / −</kbd></td><td>缩放</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>选择范围 / 添加到所选</td></tr><tr><td><kbd>Esc</kbd></td><td>取消选择</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>撤销 / 重做</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>保存… / 另存为…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>导出所选区间…</td></tr><tr><td><kbd>⌘N</kbd></td><td>新建窗口</td></tr><tr><td><kbd>⌘O</kbd></td><td>打开…</td></tr><tr><td><kbd>⌘/</kbd></td><td>显示 / 隐藏快捷键列表</td></tr><tr><td><kbd>⌘,</kbd></td><td>设置…</td></tr></tbody></table>
+<h2 id="zh-Hans-settings">设置</h2>
+<ul><li>选择<b>QuickCut &gt; 设置…</b>（<kbd>⌘,</kbd>）打开。</li><li><b>通用</b>：显示语言、方向键每次移动的帧数等。</li><li><b>保存</b>：<kbd>⌘S</kbd> 的默认行为、新文件的名称、所选区间的导出方式。</li><li><b>快捷键</b>：可将播放、分割、删除等单键改为任意按键。</li><li>按 <kbd>⌘/</kbd> 显示或隐藏编辑窗口右侧的快捷键列表。</li></ul>
+<h2 id="zh-Hans-purchase">免费次数与购买</h2>
+<ul><li>前 <b>20 次导出</b>可免费使用全部功能。</li><li>之后可通过一次性 App 内购买 <b>QuickCut Unlimited</b> 解锁无限导出，无需订阅。</li><li>更换 Mac 或重新安装后，请打开<b>设置 &gt; QuickCut Unlimited</b> 并点按<b>恢复购买</b>。需要使用购买时的 Apple 账户登录 App Store。</li></ul>
+<h2 id="zh-Hans-trouble">疑难解答</h2>
+<ul><li><b>无法打开</b>：VP9 / AV1 视频在部分 Mac 上可能无法打开。请尝试转换为 MP4（H.264 / HEVC）。</li><li><b>无法覆盖保存</b>：MKV 无法覆盖保存，请另存为新文件。同时请确认磁盘剩余空间。</li><li><b>按键没有反应</b>：请确认编辑窗口位于最前面。单键可能已在<b>设置 &gt; 快捷键</b>中被更改。</li><li><b>视频不会被发送到任何地方</b>：所有处理都在 Mac 上完成，无需联网。</li></ul>
+<h2 id="zh-Hans-contact">联系我们</h2>
+<p>如有疑问或需报告问题，请发送邮件至 <b>nbash0926i@gmail.com</b>。</p>
+<p class="links"><a href="privacy.html#zh-Hans">隐私政策</a> · <a href="./">首页</a></p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant">
+<h1>QuickCut 輔助說明</h1>
+<p class="updated">最後更新：2026年10月3日</p>
+<p class="toc"><b>目錄</b>: <a href="#zh-Hant-start">打開影片</a> · <a href="#zh-Hant-edit">剪切</a> · <a href="#zh-Hant-save">儲存</a> · <a href="#zh-Hant-selection">只匯出一部分</a> · <a href="#zh-Hant-shortcuts">鍵盤快速鍵</a> · <a href="#zh-Hant-settings">設定</a> · <a href="#zh-Hant-purchase">免費次數與購買</a> · <a href="#zh-Hant-trouble">疑難排解</a></p>
+<h2 id="zh-Hant-start">打開影片</h2>
+<ul><li>將檔案<b>拖放到視窗</b>，或選擇<b>檔案 &gt; 打開…</b>（<kbd>⌘O</kbd>）。按一下空白視窗也可以打開。</li><li>也可以在 Finder 中按住 Control 鍵並按一下影片，然後選擇<b>打開檔案的應用程式 &gt; QuickCut</b>。</li><li>每部影片會在各自的視窗中打開。關閉所有視窗後，可選擇<b>檔案 &gt; 新增視窗</b>（<kbd>⌘N</kbd>）或按一下 Dock 中的圖像重新打開。</li><li>支援格式：<b>MP4 / MOV</b>（可覆寫或另存新檔）、<b>MKV</b>（可打開，儲存為 MP4）。</li></ul>
+<h2 id="zh-Hant-edit">剪切</h2>
+<ul><li><kbd>空白鍵</kbd>播放 / 暫停，<kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> 倒轉、停止、快轉，每按一次速度加快。</li><li>在不需要的片段開頭和結尾按 <kbd>E</kbd>（<b>分割剪輯片段</b>），選取中間的片段後按 <kbd>R</kbd>（<b>波紋刪除</b>），後面的部分會自動接上。</li><li><kbd>←</kbd> <kbd>→</kbd> 移動 1 格，加按 <kbd>⇧</kbd> 移動 5 格（可在設定中更改）。</li><li>時間軸可用雙指撥動、<kbd>+</kbd> <kbd>−</kbd> 或捲動來縮放。透過波形和縮覽圖，可以快速找到靜音和多餘的畫面。</li><li>操作失誤時，按 <kbd>⌘Z</kbd> 還原，按 <kbd>⇧⌘Z</kbd> 重做。</li></ul>
+<h2 id="zh-Hant-save">儲存</h2>
+<ul><li>按 <kbd>⌘S</kbd>（<b>儲存…</b>）可選擇<b>取代原始檔案</b>或<b>儲存為新檔案</b>。<kbd>⇧⌘S</kbd> 一律另存新檔。</li><li>不重新編碼，畫質與音質維持原樣。只處理剪切點附近的影格，因此輸出幾乎瞬間完成。</li><li>可在<b>設定 &gt; 儲存</b>中更改 <kbd>⌘S</kbd> 的預設動作（每次詢問 / 一律取代 / 一律另存）。</li><li>MKV 檔案無法覆寫，會另存為新的 MP4 檔案。</li></ul>
+<h2 id="zh-Hant-selection">只匯出一部分</h2>
+<ul><li>按住 <kbd>⇧</kbd> 並按一下片段可選取範圍，按住 <kbd>⌘</kbd> 並按一下可加入選取。</li><li>選擇<b>檔案 &gt; 匯出所選區間…</b>（<kbd>⇧⌘E</kbd>）只匯出所選片段。對整部影片的編輯會保留。</li><li>所選區間不連續時，可選擇<b>合併為一個檔案</b>或<b>分別儲存為多個檔案</b>。</li></ul>
+<h2 id="zh-Hant-shortcuts">鍵盤快速鍵</h2>
+<table><thead><tr><th>按鍵</th><th>操作</th></tr></thead><tbody><tr><td><kbd>Space</kbd></td><td>播放 / 暫停</td></tr><tr><td><kbd>J / K / L</kbd></td><td>倒轉 / 停止 / 快轉</td></tr><tr><td><kbd>E · ⌘K · ⌘B</kbd></td><td>分割剪輯片段</td></tr><tr><td><kbd>R · ⌫ · ⌦</kbd></td><td>波紋刪除</td></tr><tr><td><kbd>← / →</kbd></td><td>移動 1 格</td></tr><tr><td><kbd>⇧← / ⇧→</kbd></td><td>移動 5 格</td></tr><tr><td><kbd>↑ / ↓</kbd></td><td>上一個 / 下一個編輯點</td></tr><tr><td><kbd>Home / End</kbd></td><td>跳到開頭 / 結尾</td></tr><tr><td><kbd>+ / −</kbd></td><td>縮放</td></tr><tr><td><kbd>⇧Click / ⌘Click</kbd></td><td>選取範圍 / 加入選取</td></tr><tr><td><kbd>Esc</kbd></td><td>取消選取</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>還原 / 重做</td></tr><tr><td><kbd>⌘S / ⇧⌘S</kbd></td><td>儲存… / 另存新檔…</td></tr><tr><td><kbd>⇧⌘E</kbd></td><td>匯出所選區間…</td></tr><tr><td><kbd>⌘N</kbd></td><td>新增視窗</td></tr><tr><td><kbd>⌘O</kbd></td><td>打開…</td></tr><tr><td><kbd>⌘/</kbd></td><td>顯示 / 隱藏快速鍵列表</td></tr><tr><td><kbd>⌘,</kbd></td><td>設定…</td></tr></tbody></table>
+<h2 id="zh-Hant-settings">設定</h2>
+<ul><li>選擇<b>QuickCut &gt; 設定…</b>（<kbd>⌘,</kbd>）打開。</li><li><b>一般</b>：顯示語言、方向鍵每次移動的格數等。</li><li><b>儲存</b>：<kbd>⌘S</kbd> 的預設動作、新檔案的名稱、所選區間的匯出方式。</li><li><b>快速鍵</b>：可將播放、分割、刪除等單鍵改為任意按鍵。</li><li>按 <kbd>⌘/</kbd> 顯示或隱藏編輯視窗右側的快速鍵列表。</li></ul>
+<h2 id="zh-Hant-purchase">免費次數與購買</h2>
+<ul><li>前 <b>20 次匯出</b>可免費使用全部功能。</li><li>之後可透過一次性 App 內購買 <b>QuickCut Unlimited</b> 解鎖無限匯出，無須訂閱。</li><li>更換 Mac 或重新安裝後，請打開<b>設定 &gt; QuickCut Unlimited</b> 並按一下<b>回復購買項目</b>。需使用購買時的 Apple 帳號登入 App Store。</li></ul>
+<h2 id="zh-Hant-trouble">疑難排解</h2>
+<ul><li><b>無法打開</b>：VP9 / AV1 影片在部分 Mac 上可能無法打開。請嘗試轉換為 MP4（H.264 / HEVC）。</li><li><b>無法覆寫</b>：MKV 無法覆寫，請另存新檔。同時請確認磁碟剩餘空間。</li><li><b>按鍵沒有反應</b>：請確認編輯視窗位於最前方。單鍵可能已在<b>設定 &gt; 快速鍵</b>中被更改。</li><li><b>影片不會傳送到任何地方</b>：所有處理都在 Mac 上完成，無須連網。</li></ul>
+<h2 id="zh-Hant-contact">聯絡我們</h2>
+<p>如有疑問或需回報問題，請寄信至 <b>nbash0926i@gmail.com</b>。</p>
+<p class="links"><a href="privacy.html#zh-Hant">隱私權政策</a> · <a href="./">首頁</a></p>
+</section>
+
+<script>
+(function () {
+  var codes = ['ja','en','de','es','fr','it','ko','pt-BR','zh-Hans','zh-Hant'];
+  function pick() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    var base = h.split('-').slice(0, h.indexOf('zh') === 0 || h.indexOf('pt') === 0 ? 2 : 1).join('-');
+    if (codes.indexOf(base) >= 0) return base;
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'en'];
+    for (var i = 0; i < langs.length; i++) {
+      var l = langs[i].toLowerCase();
+      if (l.indexOf('zh') === 0) return (l.indexOf('hant') >= 0 || l.indexOf('tw') >= 0 || l.indexOf('hk') >= 0 || l.indexOf('mo') >= 0) ? 'zh-Hant' : 'zh-Hans';
+      if (l.indexOf('pt') === 0) return 'pt-BR';
+      var b = l.split('-')[0];
+      if (codes.indexOf(b) >= 0) return b;
+    }
+    return 'en';
+  }
+  function show(code) {
+    document.querySelectorAll('section').forEach(function (s) { s.classList.toggle('active', s.id === code); });
+    document.querySelectorAll('nav a').forEach(function (a) { a.setAttribute('aria-current', a.dataset.lang === code ? 'true' : 'false'); });
+    document.documentElement.lang = code;
+  }
+  document.body.classList.add('js');
+  var current = pick();
+  show(current);
+  window.addEventListener('hashchange', function () {
+    var next = pick();
+    if (next !== current) { current = next; show(next); if (location.hash.slice(1) === next) window.scrollTo(0, 0); }
+  });
+  var target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (target && target.tagName !== 'SECTION') target.scrollIntoView();
+})();
+</script>
+</body>
+</html>
