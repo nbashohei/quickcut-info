@@ -1,8 +1,10 @@
 # quickcut-info
 
-QuickCut for Mac の公開情報サイト（GitHub Pages）。
+QuickCut の公開情報サイト。本番は **https://quickcut.app**（Cloudflare Pages）。同じ内容が旧 GitHub Pages（https://nbashohei.github.io/quickcut-info/）にも配信されるが、各ページの canonical・hreflang・sitemap は quickcut.app を指す。
 
-- [プライバシーポリシー / Privacy Policy](https://nbashohei.github.io/quickcut-info/privacy.html) — App Store のプライバシーポリシー URL / サポート URL に使用（10 言語。ブラウザ言語で自動選択、`#de` 等のアンカーで指定可）
-- [ヘルプ / Help](https://nbashohei.github.io/quickcut-info/help.html) — アプリの Help メニュー「QuickCut Help」の遷移先（10 言語。ブラウザ言語で自動選択、`#de` 等で指定可）。MPCut リポジトリの `scripts/make-help-page.py` が生成（手で編集しない）
-- [オープンソースライセンス / OSS Licenses](https://nbashohei.github.io/quickcut-info/licenses.html)
-- [LP（トップ）](https://nbashohei.github.io/quickcut-info/) — 10 言語。`index.html` は MPCut リポジトリの `scripts/make-landing-page.py` が生成（手で編集しない）。将来 quickcut.app + Cloudflare Pages へ移す予定
+- [LP（トップ）](https://quickcut.app/) — 10 言語。`index.html` と `<言語>/index.html`・`sitemap.xml`・`robots.txt` は MPCut リポジトリの `scripts/make-landing-page.py` が生成（手で編集しない）
+- [ヘルプ / Help](https://quickcut.app/help) — アプリの Help メニュー「QuickCut Help」の遷移先（10 言語。ブラウザ言語で自動選択、`#de` 等で指定可）。MPCut リポジトリの `scripts/make-help-page.py` が生成（手で編集しない）
+- [プライバシーポリシー / Privacy Policy](https://quickcut.app/privacy) — アプリの About から開く（10 言語。`#de` 等で指定可）。App Store Connect のプライバシーポリシー URL / サポート URL は当面 github.io 側を登録したまま
+- [オープンソースライセンス / OSS Licenses](https://quickcut.app/licenses)
+
+Cloudflare Pages では拡張子なしが正規 URL（`/help.html` は `/help` へ転送）。アプリ 1.0 (3) までと App Store Connect が github.io の URL を参照しているので、GitHub Pages 側は消さない。
