@@ -1,5 +1,6 @@
 /* Local-only product demo. No analytics, external embeds, or dependencies. */
 (() => {
+  if (document.documentElement.dataset.languageRedirecting === 'true') return;
   const video = document.getElementById('product-demo');
   const button = document.querySelector('.demo-toggle');
   if (!video || !button) return;
